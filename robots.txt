@@ -1,0 +1,57 @@
+# Nextiweb Solutions — robots.txt
+# https://nextiwebsolution.com/
+
+# Moteurs de recherche traditionnels
+User-agent: *
+Allow: /
+Disallow: /assets/images/og-*.jpg
+
+# Bots IA — explicitement autorisés (stratégie GEO/AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Aspirateurs
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap
+Sitemap: https://nextiwebsolution.com/sitemap.xml
