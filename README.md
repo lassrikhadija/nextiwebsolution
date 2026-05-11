@@ -58,8 +58,8 @@ nextiwebsolusion/
 | 02 | 🍽️ **Restaurant et café** | Kintsugi Sushi Bar | ✅ Actif | Resto, bistro, café, bar, pub, brasserie, traiteur événements |
 | 03 | 💧 **Construction et rénovation** | Aqua Élite | ✅ Actif | Piscinier, paysagiste, entrepreneur général, rénovation, designer d'intérieur, ébéniste, architecte |
 | 04 | 🍫 **Art et artisanat** | Maison Cacao | ✅ Actif | Chocolatier, fromager, épicerie fine, savonnier, atelier, torréfacteur, bijoutier |
-| 05 | 🛍️ **E-commerce et marque locale** | À venir | 🟡 Bientôt | Pure-players, marques DTC québécoises, créateurs vendant directement |
-| 06 | 🏠 **Services à domicile** | À venir | 🟡 Bientôt | Entretien ménager, aide à domicile, plombier, électricien, déménagement, paysagiste d'entretien |
+| 05 | 🛍️ **E-commerce et marque locale** | Marque DTC fictive | ✅ Actif | Pure-player, créateur indépendant, mode locale, cosmétique artisanale, box mensuelle, subscription commerce |
+| 06 | 🏠 **Services à domicile** | Entretien ménager fictif | ✅ Actif | Entretien ménager, aide aux aînés, plombier, électricien, déménagement, paysagiste d'entretien, nettoyage commercial |
 
 Chaque page créno contient :
 1. Hero "famille" avec multi-métiers explicités
