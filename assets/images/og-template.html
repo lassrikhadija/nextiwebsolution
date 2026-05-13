@@ -240,9 +240,9 @@
   <div class="instructions">
     <h2>🎨 Générateur OG images — Nextiweb Studio</h2>
     <p><strong>Instructions :</strong></p>
-    <p>1. Cliquez sur « <code>📥 Télécharger PNG</code> » à droite de chaque carte pour exporter une image individuelle.</p>
-    <p>2. Ou cliquez sur « <strong>Tout télécharger</strong> » en bas pour exporter les 12 d'un coup.</p>
-    <p>3. Les images sont générées à <code>1200×630 px</code> exactement, prêtes pour Open Graph / Twitter Cards.</p>
+    <p>1. Cliquez sur « <code>📥 Télécharger JPG</code> » à droite de chaque carte pour exporter une image (JPG q85, ~100 KB).</p>
+    <p>2. Ou cliquez sur « <strong>Tout télécharger</strong> » en bas pour exporter les 12 JPG d'un coup.</p>
+    <p>3. Les images sont générées à <code>1200×630 px</code> exactement, JPG quality 85, prêtes pour Open Graph / Twitter Cards.</p>
     <p>4. Déposez les 12 PNG dans le dossier <code>assets/images/</code> du repo, puis commit + push.</p>
     <p style="margin-top:16px;"><strong>Astuce alternative :</strong> chaque carte peut aussi être capturée via Chrome DevTools → clic droit sur la carte → Inspect → <code>⋮</code> → <code>Capture node screenshot</code>.</p>
   </div>
@@ -252,7 +252,7 @@
     <div class="card-header">
       <h3>1 · Accueil</h3>
       <span class="filename">og-home.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-home', 'og-home')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-home', 'og-home')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-home">
       <header class="og-top">
@@ -278,7 +278,7 @@
     <div class="card-header">
       <h3>2 · Manifeste</h3>
       <span class="filename">og-laboratoire.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-laboratoire', 'og-laboratoire')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-laboratoire', 'og-laboratoire')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-laboratoire">
       <header class="og-top">
@@ -304,7 +304,7 @@
     <div class="card-header">
       <h3>3 · Méthode</h3>
       <span class="filename">og-methodologie.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-methodologie', 'og-methodologie')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-methodologie', 'og-methodologie')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-methodologie">
       <header class="og-top">
@@ -330,7 +330,7 @@
     <div class="card-header">
       <h3>4 · À propos</h3>
       <span class="filename">og-about.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-about', 'og-about')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-about', 'og-about')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-about">
       <header class="og-top">
@@ -356,7 +356,7 @@
     <div class="card-header">
       <h3>5 · Galerie labo</h3>
       <span class="filename">og-labo.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-labo', 'og-labo')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-labo', 'og-labo')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-labo">
       <header class="og-top">
@@ -382,7 +382,7 @@
     <div class="card-header">
       <h3>6 · Blog</h3>
       <span class="filename">og-blog.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-blog', 'og-blog')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-blog', 'og-blog')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card small-title" id="og-blog">
       <header class="og-top">
@@ -408,7 +408,7 @@
     <div class="card-header">
       <h3>7 · Créno 01 — Soins et services</h3>
       <span class="filename">og-cabinet-de-soins.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-cabinet-de-soins', 'og-cabinet-de-soins')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-cabinet-de-soins', 'og-cabinet-de-soins')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-cabinet-de-soins" data-accent="soins">
       <header class="og-top">
@@ -434,7 +434,7 @@
     <div class="card-header">
       <h3>8 · Créno 02 — Restaurant et café</h3>
       <span class="filename">og-restauration.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-restauration', 'og-restauration')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-restauration', 'og-restauration')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-restauration" data-accent="resto">
       <header class="og-top">
@@ -460,7 +460,7 @@
     <div class="card-header">
       <h3>9 · Créno 03 — Construction et rénovation</h3>
       <span class="filename">og-construction.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-construction', 'og-construction')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-construction', 'og-construction')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-construction" data-accent="construction">
       <header class="og-top">
@@ -486,7 +486,7 @@
     <div class="card-header">
       <h3>10 · Créno 04 — Art et artisanat</h3>
       <span class="filename">og-artisan.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-artisan', 'og-artisan')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-artisan', 'og-artisan')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-artisan" data-accent="artisan">
       <header class="og-top">
@@ -512,7 +512,7 @@
     <div class="card-header">
       <h3>11 · Créno 05 — E-commerce et marque locale</h3>
       <span class="filename">og-ecommerce.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-ecommerce', 'og-ecommerce')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-ecommerce', 'og-ecommerce')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card small-title" id="og-ecommerce" data-accent="ecommerce">
       <header class="og-top">
@@ -538,7 +538,7 @@
     <div class="card-header">
       <h3>12 · Créno 06 — Services à domicile</h3>
       <span class="filename">og-services-domicile.jpg</span>
-      <button class="btn-download" onclick="downloadCard('og-services-domicile', 'og-services-domicile')">📥 Télécharger PNG</button>
+      <button class="btn-download" onclick="downloadCard('og-services-domicile', 'og-services-domicile')">📥 Télécharger JPG</button>
     </div>
     <section class="og-card" id="og-services-domicile" data-accent="domicile">
       <header class="og-top">
@@ -561,7 +561,7 @@
 
   <!-- ============= BOUTON GLOBAL ============= -->
   <div style="text-align:center; margin-top:60px;">
-    <button class="download-all" onclick="downloadAll()">📦 Tout télécharger (12 PNG)</button>
+    <button class="download-all" onclick="downloadAll()">📦 Tout télécharger (12 JPG)</button>
     <p style="margin-top:12px; color:#94a3b8; font-size:13px;">Les 12 images se téléchargent une par une (~30 secondes au total).</p>
   </div>
 
@@ -584,7 +584,7 @@
       }).then(canvas => {
         canvas.toBlob(blob => {
           const link = document.createElement('a');
-          link.download = filename + '.png';
+          link.download = filename + '.jpg';
           link.href = URL.createObjectURL(blob);
           link.click();
           setTimeout(() => URL.revokeObjectURL(link.href), 1000);
@@ -593,7 +593,7 @@
             button.textContent = originalText;
             button.disabled = false;
           }, 2000);
-        }, 'image/png', 0.95);
+        }, 'image/jpeg', 0.85);
       }).catch(err => {
         console.error(err);
         button.textContent = '❌ Erreur';
@@ -615,7 +615,7 @@
         if (i >= cards.length) {
           button.textContent = '✅ Tout téléchargé !';
           setTimeout(() => {
-            button.textContent = '📦 Tout télécharger (12 PNG)';
+            button.textContent = '📦 Tout télécharger (12 JPG)';
             button.disabled = false;
           }, 3000);
           return;
@@ -633,13 +633,13 @@
         }).then(canvas => {
           canvas.toBlob(blob => {
             const link = document.createElement('a');
-            link.download = filename + '.png';
+            link.download = filename + '.jpg';
             link.href = URL.createObjectURL(blob);
             link.click();
             setTimeout(() => URL.revokeObjectURL(link.href), 500);
             i++;
             setTimeout(next, 800); // pause entre chaque pour éviter d'écraser
-          }, 'image/png', 0.95);
+          }, 'image/jpeg', 0.85);
         });
       };
       next();
