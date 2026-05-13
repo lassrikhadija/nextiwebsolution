@@ -92,4 +92,18 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://nextiwebstudio.ca/politique-cookies.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://nextiwebstudio.ca/mentions-legales.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

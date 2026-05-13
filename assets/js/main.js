@@ -122,6 +122,17 @@
     const refuseBtn = banner.querySelector('[data-consent="refuse"]');
     if (acceptBtn) acceptBtn.addEventListener('click', () => recordChoice('accept'));
     if (refuseBtn) refuseBtn.addEventListener('click', () => recordChoice('refuse'));
+
+    // "Gérer mes cookies" — boutons dans le footer ou la politique de cookies
+    const manageBtns = document.querySelectorAll('#manage-cookies-btn, #manage-cookies-cta, [data-consent="manage"]');
+    manageBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        banner.setAttribute('data-open', 'true');
+        // optionnel : faire scroller vers le bas pour que le bandeau soit visible
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      });
+    });
   }
 
   // ---------- 8. SINGLE-OPEN FAQ (par groupe) ----------
