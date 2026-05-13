@@ -1,5 +1,5 @@
 # Nextiweb Solutions — robots.txt
-# https://nextiwebsolution.com/
+# https://nextiwebstudio.ca/
 
 # Moteurs de recherche traditionnels
 User-agent: *
@@ -54,4 +54,4 @@ User-agent: MJ12bot
 Disallow: /
 
 # Sitemap
-Sitemap: https://nextiwebsolution.com/sitemap.xml
+Sitemap: https://nextiwebstudio.ca/sitemap.xml

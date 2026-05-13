@@ -1,4 +1,4 @@
-# Nextiweb Solutions — nextiwebsolution.com
+# Nextiweb Solutions — nextiwebstudio.ca
 
 > Le **laboratoire** créatif de [Nextiweb](https://nextiweb.ca), agence web à Montréal.
 > 6 crénos sectoriels, 6 démos, méthode SEO + GEO + Marketing documentée.
@@ -111,7 +111,7 @@ Voir [demos/RUBAN-CONCEPT.md](demos/RUBAN-CONCEPT.md) pour le snippet HTML/CSS �
 
 ## Liens
 
-- Site live : https://nextiwebsolution.com (à venir)
+- Site live : https://nextiwebstudio.ca (à venir)
 - Agence parente : https://nextiweb.ca
 - Brief original : `../BRIEF-NEXTIWEBSOLUTION.md`
 

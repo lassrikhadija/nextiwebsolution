@@ -55,4 +55,4 @@ Liste des images à produire pour la mise en ligne complète.
 
 Avant mise en ligne, tester chaque OG sur :
 - https://opengraph.xyz/
-- https://www.opengraph.xyz/url/?url=https%3A%2F%2Fnextiwebsolution.com%2F
+- https://www.opengraph.xyz/url/?url=https%3A%2F%2Fnextiwebstudio.ca%2F

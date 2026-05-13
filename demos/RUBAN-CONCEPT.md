@@ -23,7 +23,7 @@ Adaptez **uniquement** le nom du créno et l'URL de retour dans les 2 endroits m
     🧪 <strong>CONCEPT</strong> — démonstration créée par
     <a href="https://nextiweb.ca" rel="noopener">Nextiweb</a>
     pour illustrer le créno
-    <a href="https://nextiwebsolution.com/labo/[À ADAPTER]/" rel="noopener">[À ADAPTER : nom du créno]</a>.
+    <a href="https://nextiwebstudio.ca/labo/[À ADAPTER]/" rel="noopener">[À ADAPTER : nom du créno]</a>.
     Aucun service réel n'est offert.
   </span>
   <button type="button" class="concept-ribbon-close" aria-label="Fermer ce ruban" onclick="document.getElementById('concept-ribbon').hidden=true; localStorage.setItem('nws-ribbon-closed','1');">✕</button>
@@ -40,10 +40,10 @@ Adaptez **uniquement** le nom du créno et l'URL de retour dans les 2 endroits m
 
 | Démo | URL du créno à coller | Texte créno |
 |---|---|---|
-| Studio Belmont (dentaire) | `https://nextiwebsolution.com/labo/dentaire-et-soins/` | `Soins et services` |
-| Kintsugi Sushi Bar (resto) | `https://nextiwebsolution.com/labo/restaurant-et-cafe/` | `Restaurant et café` |
-| Aqua Élite (piscine) | `https://nextiwebsolution.com/labo/piscine-et-renovation/` | `Construction et rénovation` |
-| Maison Cacao (chocolat) | `https://nextiwebsolution.com/labo/chocolat-et-artisan/` | `Art et artisanat` |
+| Studio Belmont (dentaire) | `https://nextiwebstudio.ca/labo/dentaire-et-soins/` | `Soins et services` |
+| Kintsugi Sushi Bar (resto) | `https://nextiwebstudio.ca/labo/restaurant-et-cafe/` | `Restaurant et café` |
+| Aqua Élite (piscine) | `https://nextiwebstudio.ca/labo/piscine-et-renovation/` | `Construction et rénovation` |
+| Maison Cacao (chocolat) | `https://nextiwebstudio.ca/labo/chocolat-et-artisan/` | `Art et artisanat` |
 
 ---
 
