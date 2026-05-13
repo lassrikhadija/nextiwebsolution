@@ -1811,7 +1811,67 @@ h3 > .ico:first-child {
   transition: filter var(--t-base), transform var(--t-base);
 }
 
-/* -------- 32. PRINT -------- */
+/* -------- 32. BANDEAU CONSENTEMENT COOKIE (Loi 25 Québec) -------- */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  background: rgba(15, 20, 32, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 230, 118, 0.3);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+  padding: var(--space-5) var(--space-6);
+  transform: translateY(100%);
+  transition: transform var(--t-base) ease-out;
+}
+.cookie-banner[data-open="true"] {
+  transform: translateY(0);
+}
+.cookie-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-6);
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .cookie-banner-inner { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+.cookie-banner-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  text-align: left;
+}
+.cookie-banner-text strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+.cookie-banner-text a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.cookie-banner-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 720px) {
+  .cookie-banner-actions { justify-content: stretch; }
+  .cookie-banner-actions .btn { flex: 1; min-width: 120px; }
+}
+.cookie-banner .btn-sm {
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-5);
+}
+
+/* -------- 33. PRINT -------- */
 @media print {
   .header, .footer, .nav-toggle, .hero-glow, .hero-grid-bg { display: none; }
   body { background: white; color: black; }

@@ -96,7 +96,35 @@
     el.textContent = new Date().getFullYear();
   });
 
-  // ---------- 7. SINGLE-OPEN FAQ (par groupe) ----------
+  // ---------- 7. BANDEAU CONSENTEMENT COOKIE (Loi 25) ----------
+  const CONSENT_KEY = 'nws-consent';
+  const CONSENT_VERSION = '1'; // bump si la politique change
+  const banner = document.getElementById('cookie-banner');
+
+  if (banner) {
+    const stored = localStorage.getItem(CONSENT_KEY);
+    const isValid = stored && stored.startsWith(CONSENT_VERSION + ':');
+
+    if (!isValid) {
+      // pas de choix enregistré → afficher le bandeau
+      requestAnimationFrame(() => banner.setAttribute('data-open', 'true'));
+    }
+
+    const recordChoice = (choice) => {
+      const value = CONSENT_VERSION + ':' + choice + ':' + Date.now();
+      localStorage.setItem(CONSENT_KEY, value);
+      banner.setAttribute('data-open', 'false');
+      // dispatch event au cas où d'autres scripts veulent réagir
+      document.dispatchEvent(new CustomEvent('nws:consent', { detail: { choice } }));
+    };
+
+    const acceptBtn = banner.querySelector('[data-consent="accept"]');
+    const refuseBtn = banner.querySelector('[data-consent="refuse"]');
+    if (acceptBtn) acceptBtn.addEventListener('click', () => recordChoice('accept'));
+    if (refuseBtn) refuseBtn.addEventListener('click', () => recordChoice('refuse'));
+  }
+
+  // ---------- 8. SINGLE-OPEN FAQ (par groupe) ----------
   document.querySelectorAll('.faq-list').forEach((list) => {
     const items = list.querySelectorAll('.faq-item');
     items.forEach((item) => {
