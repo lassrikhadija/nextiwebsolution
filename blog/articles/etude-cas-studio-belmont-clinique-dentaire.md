@@ -15,7 +15,7 @@ status: draft
 
 ## Plan d'article
 
-1. **Le contexte** — Clinique dentaire fictive servant de démo pour Nextiweb Solutions, simulant un cas réel : ancien site WordPress lent, peu de RDV en ligne, invisible sur «&nbsp;dentiste rosemont&nbsp;».
+1. **Le contexte** — Clinique dentaire fictive servant de démo pour Nextiweb Studio, simulant un cas réel : ancien site WordPress lent, peu de RDV en ligne, invisible sur «&nbsp;dentiste rosemont&nbsp;».
 2. **Le diagnostic** — Audit Lighthouse 58, Schema absent, mobile cassé, formulaire 11 champs, aucune FAQ, Google Business Profile incomplet.
 3. **La stratégie en 3 piliers** — SEO local + GEO/AEO + tunnel de conversion.
 4. **Les choix design** — Palette claire/apaisante (à l'opposé du studio sombre), photos d'équipe réelles, biographies, transparence des prix.

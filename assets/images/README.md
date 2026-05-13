@@ -1,4 +1,4 @@
-# Images — Nextiweb Solutions
+# Images — Nextiweb Studio
 
 Liste des images à produire pour la mise en ligne complète.
 
@@ -25,7 +25,7 @@ Liste des images à produire pour la mise en ligne complète.
 - [ ] `og-blog.jpg` — Index blog
 
 ### Logo
-- [ ] `logo.png` — Logo Nextiweb Solutions (transparent, 512×512)
+- [ ] `logo.png` — Logo Nextiweb Studio (transparent, 512×512)
 - [ ] `logo-white.png` — Variante blanche
 - [ ] `favicon.png` — 32×32 (le SVG inline du `<link rel="icon">` est déjà en place comme fallback)
 

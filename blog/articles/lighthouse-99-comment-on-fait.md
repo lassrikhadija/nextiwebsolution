@@ -23,6 +23,6 @@ status: draft
 6. **Best Practices — les indispensables** — HTTPS forcé, CSP, en-têtes sécurité, console sans erreurs, librairies à jour.
 7. **SEO — la checklist Lighthouse** — Meta tags, Schema valide, mobile-friendly, robots.txt, sitemap, hreflang.
 8. **Les outils pour mesurer** — Lighthouse CLI, PageSpeed Insights, WebPageTest, CrUX.
-9. **Cas pratique — Une page Nextiweb Solutions** — Audit annoté.
+9. **Cas pratique — Une page Nextiweb Studio** — Audit annoté.
 10. **Les pièges courants qui font perdre 10 points** — Police chargée en bloc, hero non préchargé, images non dimensionnées.
 11. **Conclusion + CTA** — Audit performance gratuit Nextiweb.

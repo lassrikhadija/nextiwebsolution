@@ -1,4 +1,4 @@
-# Nextiweb Solutions — nextiwebstudio.ca
+# Nextiweb Studio — nextiwebstudio.ca
 
 > Le **laboratoire** créatif de [Nextiweb](https://nextiweb.ca), agence web à Montréal.
 > 6 crénos sectoriels, 6 démos, méthode SEO + GEO + Marketing documentée.

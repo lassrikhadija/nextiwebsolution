@@ -1,4 +1,4 @@
-# Démos — Nextiweb Solutions
+# Démos — Nextiweb Studio
 
 Ce dossier hébergera les démos sectorielles complètes (HTML/CSS/JS) une fois migrées depuis Hostinger.
 
