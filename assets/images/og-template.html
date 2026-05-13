@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur OG images — Nextiweb Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #050810;
+      color: #f5f7fa;
+      font-family: 'Inter', system-ui, sans-serif;
+      padding: 40px 20px 80px;
+      min-height: 100vh;
+    }
+
+    .instructions {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      padding: 24px;
+      background: #0f1420;
+      border: 1px solid rgba(0, 230, 118, 0.2);
+      border-radius: 12px;
+    }
+    .instructions h2 { font-size: 20px; margin-bottom: 12px; color: #00e676; }
+    .instructions p { font-size: 14px; line-height: 1.6; color: #94a3b8; margin-bottom: 8px; }
+    .instructions strong { color: #f5f7fa; }
+    .instructions code { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: #1a2030; padding: 2px 6px; border-radius: 4px; color: #00e676; }
+
+    .download-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #00e676;
+      color: #0a0e1a;
+      border: 0;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .download-all:hover { background: #00ff80; }
+
+    .card-wrapper {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
+    .card-header h3 { font-size: 18px; font-weight: 600; color: #f5f7fa; }
+    .card-header .filename { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #94a3b8; }
+    .card-header .btn-download {
+      padding: 6px 14px;
+      background: rgba(0, 230, 118, 0.15);
+      color: #00e676;
+      border: 1px solid rgba(0, 230, 118, 0.4);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .card-header .btn-download:hover {
+      background: #00e676;
+      color: #0a0e1a;
+    }
+
+    /* ========================
+       OG CARD — dimensions exactes 1200×630
+       ======================== */
+    .og-card {
+      width: 1200px;
+      height: 630px;
+      background:
+        radial-gradient(ellipse 35% 50% at 100% 0%, rgba(0, 230, 118, 0.18), transparent 65%),
+        radial-gradient(ellipse 25% 35% at 0% 100%, rgba(0, 230, 118, 0.08), transparent 70%),
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        #0a0e1a;
+      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #f5f7fa;
+      padding: 60px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #1a2030;
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Variantes d'accent par créno */
+    .og-card[data-accent="soins"]::after {
+      background: radial-gradient(ellipse 30% 40% at 100% 0%, rgba(134, 239, 172, 0.18), transparent 60%);
+    }
+    .og-card[data-accent="resto"]::after {
+      background: radial-gradient(ellipse 30% 40% at 100% 0%, rgba(212, 175, 55, 0.20), transparent 60%);
+    }
+    .og-card[data-accent="construction"]::after {
+      background: radial-gradient(ellipse 30% 40% at 100% 0%, rgba(56, 189, 248, 0.20), transparent 60%);
+    }
+    .og-card[data-accent="artisan"]::after {
+      background: radial-gradient(ellipse 30% 40% at 100% 0%, rgba(251, 191, 36, 0.20), transparent 60%);
+    }
+    .og-card[data-accent="ecommerce"]::after {
+      background: radial-gradient(ellipse 30% 40% at 100% 0%, rgba(167, 139, 250, 0.20), transparent 60%);
+    }
+    .og-card[data-accent="domicile"]::after {
+      background: radial-gradient(ellipse 30% 40% at 100% 0%, rgba(251, 146, 60, 0.20), transparent 60%);
+    }
+    .og-card[data-accent]::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .og-card > * { position: relative; z-index: 1; }
+
+    /* Top : logo + eyebrow */
+    .og-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .og-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .og-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+    .og-logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #f5f7fa;
+    }
+    .og-logo-text small {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+    .og-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #00e676;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .og-eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00e676;
+      box-shadow: 0 0 12px rgba(0, 230, 118, 0.8);
+    }
+
+    /* Middle : titre */
+    .og-main h1 {
+      font-size: 68px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      margin-bottom: 24px;
+      max-width: 950px;
+    }
+    .og-main h1 .gradient {
+      background: linear-gradient(135deg, #00e676 0%, #00b85a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #00e676;
+    }
+    .og-main p {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.45;
+      color: #94a3b8;
+      max-width: 800px;
+    }
+    .og-main p strong {
+      color: #f5f7fa;
+      font-weight: 600;
+    }
+
+    /* Bottom : URL */
+    .og-footer {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .og-footer-line {
+      width: 60px;
+      height: 2px;
+      background: #00e676;
+      box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+    }
+    .og-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 500;
+      color: #f5f7fa;
+      letter-spacing: 0.02em;
+    }
+
+    /* Titres plus petits pour les longs cards */
+    .og-card.small-title h1 {
+      font-size: 56px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instructions">
+    <h2>🎨 Générateur OG images — Nextiweb Studio</h2>
+    <p><strong>Instructions :</strong></p>
+    <p>1. Cliquez sur « <code>📥 Télécharger PNG</code> » à droite de chaque carte pour exporter une image individuelle.</p>
+    <p>2. Ou cliquez sur « <strong>Tout télécharger</strong> » en bas pour exporter les 12 d'un coup.</p>
+    <p>3. Les images sont générées à <code>1200×630 px</code> exactement, prêtes pour Open Graph / Twitter Cards.</p>
+    <p>4. Déposez les 12 PNG dans le dossier <code>assets/images/</code> du repo, puis commit + push.</p>
+    <p style="margin-top:16px;"><strong>Astuce alternative :</strong> chaque carte peut aussi être capturée via Chrome DevTools → clic droit sur la carte → Inspect → <code>⋮</code> → <code>Capture node screenshot</code>.</p>
+  </div>
+
+  <!-- ============= 1. ACCUEIL ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>1 · Accueil</h3>
+      <span class="filename">og-home.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-home', 'og-home')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-home">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Le studio créatif de Nextiweb</div>
+      </header>
+      <div class="og-main">
+        <h1>Concepts web par secteur,<br><span class="gradient">pour les PME du Québec.</span></h1>
+        <p>Une galerie d'explorations conçues pour montrer ce qu'un site moderne peut faire pour <strong>votre métier</strong>.</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 2. MANIFESTE ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>2 · Manifeste</h3>
+      <span class="filename">og-laboratoire.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-laboratoire', 'og-laboratoire')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-laboratoire">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Manifeste — Le laboratoire</div>
+      </header>
+      <div class="og-main">
+        <h1>Pourquoi ce site existe.<br><span class="gradient">Et les règles qu'on s'impose.</span></h1>
+        <p><strong>6 principes non négociables</strong> · Démos transparentes, méthode documentée, zéro fake testimonial.</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/le-laboratoire</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 3. MÉTHODE ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>3 · Méthode</h3>
+      <span class="filename">og-methodologie.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-methodologie', 'og-methodologie')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-methodologie">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Méthode — Notre approche</div>
+      </header>
+      <div class="og-main">
+        <h1>SEO + GEO + Marketing.<br><span class="gradient">Trois piliers. Zéro hasard.</span></h1>
+        <p>La méthode du studio Nextiweb pour des sites qui se positionnent <strong>ET</strong> qui convertissent.</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/methodologie</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 4. À PROPOS ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>4 · À propos</h3>
+      <span class="filename">og-about.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-about', 'og-about')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-about">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Le studio</div>
+      </header>
+      <div class="og-main">
+        <h1>Le laboratoire créatif<br><span class="gradient">derrière Nextiweb.</span></h1>
+        <p>Par <strong>Khadija Ait Lassri</strong>, fondatrice · Montréal, QC, Canada</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/a-propos</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 5. LE LABO ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>5 · Galerie labo</h3>
+      <span class="filename">og-labo.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-labo', 'og-labo')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-labo">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Le labo — 6 crénos sectoriels</div>
+      </header>
+      <div class="og-main">
+        <h1>6 crénos. 6 démos.<br><span class="gradient">~40 métiers couverts.</span></h1>
+        <p>Explorez votre famille de métiers : <strong>soins, restauration, construction, artisan, e-commerce, services à domicile</strong>.</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 6. BLOG ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>6 · Blog</h3>
+      <span class="filename">og-blog.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-blog', 'og-blog')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card small-title" id="og-blog">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Le journal du studio</div>
+      </header>
+      <div class="og-main">
+        <h1>Études de cas, stratégies,<br><span class="gradient">méthodes documentées.</span></h1>
+        <p>Pour les PME québécoises qui veulent <strong>comprendre avant d'investir</strong>.</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/blog</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 7. CRÉNO 01 — SOINS ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>7 · Créno 01 — Soins et services</h3>
+      <span class="filename">og-cabinet-de-soins.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-cabinet-de-soins', 'og-cabinet-de-soins')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-cabinet-de-soins" data-accent="soins">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Créno 01 · Soins et services</div>
+      </header>
+      <div class="og-main">
+        <h1>Site web dentaire<br><span class="gradient">et professions de soins.</span></h1>
+        <p>Démo <strong>Studio Dentaire Belmont</strong> · 12 métiers couverts (dentiste, ostéo, kiné, naturopathe...)</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo/dentaire-et-soins</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 8. CRÉNO 02 — RESTAURANT ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>8 · Créno 02 — Restaurant et café</h3>
+      <span class="filename">og-restauration.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-restauration', 'og-restauration')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-restauration" data-accent="resto">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Créno 02 · Restaurant et café</div>
+      </header>
+      <div class="og-main">
+        <h1>Site web restaurant<br><span class="gradient">et café.</span></h1>
+        <p>Démo <strong>Kintsugi Sushi Bar</strong> · 9 métiers couverts (resto, bistro, café, salon de thé...)</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo/restaurant-et-cafe</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 9. CRÉNO 03 — CONSTRUCTION ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>9 · Créno 03 — Construction et rénovation</h3>
+      <span class="filename">og-construction.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-construction', 'og-construction')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-construction" data-accent="construction">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Créno 03 · Construction et rénovation</div>
+      </header>
+      <div class="og-main">
+        <h1>Site web piscine<br><span class="gradient">et rénovation.</span></h1>
+        <p>Démo <strong>Aqua Élite</strong> · 9 métiers couverts (piscinier, paysagiste, rénovateur, ébéniste...)</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo/piscine-et-renovation</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 10. CRÉNO 04 — ARTISAN ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>10 · Créno 04 — Art et artisanat</h3>
+      <span class="filename">og-artisan.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-artisan', 'og-artisan')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-artisan" data-accent="artisan">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Créno 04 · Art et artisanat</div>
+      </header>
+      <div class="og-main">
+        <h1>Site web chocolat<br><span class="gradient">et artisan.</span></h1>
+        <p>Démo <strong>Maison Cacao</strong> · 9 métiers couverts (chocolatier, fromager, savonnier, torréfacteur...)</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo/chocolat-et-artisan</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 11. CRÉNO 05 — E-COMMERCE ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>11 · Créno 05 — E-commerce et marque locale</h3>
+      <span class="filename">og-ecommerce.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-ecommerce', 'og-ecommerce')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card small-title" id="og-ecommerce" data-accent="ecommerce">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Créno 05 · E-commerce et marque locale</div>
+      </header>
+      <div class="og-main">
+        <h1>Vendre en direct.<br><span class="gradient">Sans 30% à Amazon.</span></h1>
+        <p>Pour <strong>pure-players, marques DTC, créateurs québécois</strong> qui veulent leur propre canal.</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo/e-commerce-et-marque-locale</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= 12. CRÉNO 06 — SERVICES À DOMICILE ============= -->
+  <div class="card-wrapper">
+    <div class="card-header">
+      <h3>12 · Créno 06 — Services à domicile</h3>
+      <span class="filename">og-services-domicile.jpg</span>
+      <button class="btn-download" onclick="downloadCard('og-services-domicile', 'og-services-domicile')">📥 Télécharger PNG</button>
+    </div>
+    <section class="og-card" id="og-services-domicile" data-accent="domicile">
+      <header class="og-top">
+        <div class="og-logo">
+          <img src="./logo-nextiweb-light.png" alt="" crossorigin="anonymous">
+          <div class="og-logo-text">Nextiweb Studio<small>STUDIO CRÉATIF</small></div>
+        </div>
+        <div class="og-eyebrow">Créno 06 · Services à domicile</div>
+      </header>
+      <div class="og-main">
+        <h1>Dominez votre quartier.<br><span class="gradient">SEO ultra-local.</span></h1>
+        <p>Entretien ménager, plombier, électricien, aide aux aînés, déménagement, paysagiste...</p>
+      </div>
+      <footer class="og-footer">
+        <span class="og-footer-line"></span>
+        <span class="og-url">nextiwebstudio.ca/labo/services-a-domicile</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============= BOUTON GLOBAL ============= -->
+  <div style="text-align:center; margin-top:60px;">
+    <button class="download-all" onclick="downloadAll()">📦 Tout télécharger (12 PNG)</button>
+    <p style="margin-top:12px; color:#94a3b8; font-size:13px;">Les 12 images se téléchargent une par une (~30 secondes au total).</p>
+  </div>
+
+  <script>
+    function downloadCard(elementId, filename) {
+      const node = document.getElementById(elementId);
+      const button = event.target;
+      const originalText = button.textContent;
+      button.textContent = '⏳ Génération...';
+      button.disabled = true;
+
+      html2canvas(node, {
+        scale: 1,
+        width: 1200,
+        height: 630,
+        backgroundColor: null,
+        useCORS: true,
+        allowTaint: true,
+        logging: false
+      }).then(canvas => {
+        canvas.toBlob(blob => {
+          const link = document.createElement('a');
+          link.download = filename + '.png';
+          link.href = URL.createObjectURL(blob);
+          link.click();
+          setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+          button.textContent = '✅ Téléchargé';
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+          }, 2000);
+        }, 'image/png', 0.95);
+      }).catch(err => {
+        console.error(err);
+        button.textContent = '❌ Erreur';
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.disabled = false;
+        }, 3000);
+      });
+    }
+
+    function downloadAll() {
+      const cards = document.querySelectorAll('.og-card');
+      const button = event.target;
+      button.textContent = '⏳ Génération en cours...';
+      button.disabled = true;
+
+      let i = 0;
+      const next = () => {
+        if (i >= cards.length) {
+          button.textContent = '✅ Tout téléchargé !';
+          setTimeout(() => {
+            button.textContent = '📦 Tout télécharger (12 PNG)';
+            button.disabled = false;
+          }, 3000);
+          return;
+        }
+        const card = cards[i];
+        const filename = card.id;
+        html2canvas(card, {
+          scale: 1,
+          width: 1200,
+          height: 630,
+          backgroundColor: null,
+          useCORS: true,
+          allowTaint: true,
+          logging: false
+        }).then(canvas => {
+          canvas.toBlob(blob => {
+            const link = document.createElement('a');
+            link.download = filename + '.png';
+            link.href = URL.createObjectURL(blob);
+            link.click();
+            setTimeout(() => URL.revokeObjectURL(link.href), 500);
+            i++;
+            setTimeout(next, 800); // pause entre chaque pour éviter d'écraser
+          }, 'image/png', 0.95);
+        });
+      };
+      next();
+    }
+  </script>
+
+</body>
+</html>
