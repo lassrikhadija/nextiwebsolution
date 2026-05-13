@@ -1,4 +1,4 @@
-# Nextiweb Solutions — robots.txt
+# Nextiweb Studio — robots.txt
 # https://nextiwebstudio.ca/
 
 # Moteurs de recherche traditionnels
