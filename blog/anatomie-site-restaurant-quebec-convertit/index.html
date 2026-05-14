@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00e676">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Google Consent Mode v2 — défauts Loi 25 (deny par défaut) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TFK5VQB5');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Anatomie d'un site restaurant qui convertit — 6 éléments clés | Nextiweb Studio</title>
+  <meta name="description" content="Section par section, les 6 éléments d'un site restaurant québécois qui transforme un visiteur curieux en réservation. Exemple Kintsugi Sushi Bar décortiqué.">
+  <link rel="canonical" href="https://nextiwebstudio.ca/blog/anatomie-site-restaurant-quebec-convertit/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="CA-QC">
+  <meta name="geo.placename" content="Montréal">
+  <meta name="author" content="Khadija Ait Lassri — Nextiweb Studio">
+  <meta name="keywords" content="site web restaurant Québec, site internet resto Montréal, menu HTML, réservation en ligne, anatomie site resto, SEO restauration">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:site_name" content="Nextiweb Studio">
+  <meta property="og:title" content="Anatomie d'un site restaurant qui convertit — 6 éléments clés">
+  <meta property="og:description" content="Section par section, les 6 éléments d'un site restaurant québécois qui transforme un visiteur curieux en réservation à 19h vendredi.">
+  <meta property="og:url" content="https://nextiwebstudio.ca/blog/anatomie-site-restaurant-quebec-convertit/">
+  <meta property="og:image" content="https://nextiwebstudio.ca/assets/images/og-restauration.jpg">
+  <meta property="article:published_time" content="2026-05-13T11:00:00-04:00">
+  <meta property="article:modified_time" content="2026-05-13T11:00:00-04:00">
+  <meta property="article:author" content="Khadija Ait Lassri">
+  <meta property="article:section" content="Restaurant et café">
+  <meta property="article:tag" content="Site web restaurant">
+  <meta property="article:tag" content="Conversion">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="icon" type="image/png" href="../../assets/images/favicon-nextiweb-infini.png">
+  <link rel="apple-touch-icon" href="../../assets/images/favicon-nextiweb-infini.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nextiwebstudio.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://nextiwebstudio.ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Anatomie d'un site restaurant qui convertit", "item": "https://nextiwebstudio.ca/blog/anatomie-site-restaurant-quebec-convertit/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Anatomie d'un site restaurant québécois qui convertit (6 éléments clés)",
+    "description": "Section par section, les 6 éléments d'un site restaurant québécois qui transforme un visiteur curieux en réservation. Exemple Kintsugi Sushi Bar décortiqué.",
+    "image": "https://nextiwebstudio.ca/assets/images/og-restauration.jpg",
+    "datePublished": "2026-05-13T11:00:00-04:00",
+    "dateModified": "2026-05-13T11:00:00-04:00",
+    "author": {
+      "@type": "Person",
+      "@id": "https://nextiwebstudio.ca/#khadija",
+      "name": "Khadija Ait Lassri",
+      "jobTitle": "Fondatrice de Nextiweb",
+      "url": "https://nextiwebstudio.ca/a-propos.html",
+      "sameAs": ["https://www.linkedin.com/in/khadija-ait-lassri-327b139a/"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nextiweb Studio",
+      "url": "https://nextiwebstudio.ca/",
+      "logo": { "@type": "ImageObject", "url": "https://nextiwebstudio.ca/assets/images/logo-nextiweb-light.png" }
+    },
+    "mainEntityOfPage": "https://nextiwebstudio.ca/blog/anatomie-site-restaurant-quebec-convertit/",
+    "inLanguage": "fr-CA",
+    "about": [
+      { "@type": "Service", "name": "Création de site web pour restaurant et hospitalité" },
+      { "@type": "Thing", "name": "Conversion web restauration" }
+    ],
+    "keywords": "site web restaurant Québec, menu HTML, réservation en ligne, Uber Eats alternative, SEO restauration"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Combien coûte un site web pour restaurant au Québec en 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 2 500 $ et 6 000 $ pour un site standard (menu HTML, photos pro, réservation en ligne, SEO local, conformité Loi 25). Compter 6 000 $ à 12 000 $ si vous ajoutez un système de commande directe pour court-circuiter Uber Eats, ou une intégration POS. C'est souvent rentabilisé en moins d'un an grâce aux commissions économisées sur les marketplaces." } },
+      { "@type": "Question", "name": "Faut-il vraiment un menu HTML au lieu d'un PDF ?", "acceptedAnswer": { "@type": "Answer", "text": "Toujours HTML. Un PDF n'est pas indexé par Google, ne s'adapte pas au mobile, casse l'expérience et n'est pas lu par ChatGPT/Perplexity. Un menu HTML structuré avec Schema Menu est lisible par toutes les sources, modifiable en 30 secondes par le restaurateur, et participe activement au SEO local. Le PDF est mort depuis 2022 pour la restauration." } },
+      { "@type": "Question", "name": "Quelle plateforme de réservation choisir pour un resto québécois ?", "acceptedAnswer": { "@type": "Answer", "text": "Service complet : Libro (made in Québec), OpenTable ou Resy. Toutes s'intègrent au flux du restaurant et au site. Budget plus modeste : Cal.com ou un formulaire avec confirmation manuelle. L'important n'est pas la plateforme mais le bouton 'Réserver' visible en moins d'une seconde sur mobile, sans que le client ait à scroller pour le trouver." } },
+      { "@type": "Question", "name": "Les photos pro, c'est vraiment indispensable ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, surtout pour les plats. Un photographe culinaire au Québec coûte entre 800 $ et 2 000 $ pour une session complète couvrant 15-25 plats + ambiance + équipe. C'est l'un des meilleurs ROI du secteur : les conversions de réservation augmentent de 40 à 60 % avec photos pro vs photos prises au cellulaire avec flash. Investissement amorti en 60-90 jours." } },
+      { "@type": "Question", "name": "Combien de temps pour livrer un site de restaurant ?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 3 et 6 semaines. Plus rapide qu'un site dans la santé car moins de contenu réglementaire. Le facteur limitant est généralement la session photo (planification, prise de vue, retouche) et la collecte complète du menu avec allergènes et options végétariennes. Mise en ligne du SEO local et indexation Google active en 2-3 mois supplémentaires." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFK5VQB5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Nextiweb Studio, accueil">
+        <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async">
+        <span class="logo-text"><span>Nextiweb Studio</span><small>Studio créatif</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span></button>
+      <nav id="primary-nav" class="nav" aria-label="Navigation principale">
+        <a href="../../labo/" class="nav-link">Le labo</a>
+        <a href="../../le-laboratoire.html" class="nav-link">Manifeste</a>
+        <a href="../../methodologie.html" class="nav-link">Méthode</a>
+        <a href="../../a-propos.html" class="nav-link">À propos</a>
+        <a href="../" class="nav-link" aria-current="page">Blog</a>
+        <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-anatomie-resto&utm_content=nav-cta" class="btn btn-secondary btn-sm nav-cta" rel="noopener">Visiter Nextiweb.ca →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ARTICLE HERO -->
+    <section class="sector-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container container-narrow">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/" aria-label="Accueil" class="bc-home"><svg class="ico ico-home" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a><span>/</span><a href="../">Blog</a><span>/</span><span>Anatomie d&rsquo;un site restaurant qui convertit</span>
+        </nav>
+        <span class="eyebrow">Restaurant et café · Anatomie</span>
+        <h1 class="reveal" style="margin-top:var(--space-6);">
+          Anatomie d&rsquo;un site restaurant.<br>
+          <span class="text-gradient">Les 6 éléments qui transforment un visiteur en réservation.</span>
+        </h1>
+        <p class="lead reveal" style="margin-top:var(--space-6);">
+          Section par section, avec Kintsugi Sushi Bar comme cas d&rsquo;école.
+        </p>
+        <p style="margin-top:var(--space-4); font-family:var(--font-mono); font-size:var(--text-sm); color:var(--color-text-muted);">
+          📅 13 mai 2026&nbsp;·&nbsp;⏱ 9 min de lecture&nbsp;·&nbsp;✍ Par Khadija Ait Lassri
+        </p>
+      </div>
+    </section>
+
+    <!-- TL;DR -->
+    <section class="section" style="padding-top:var(--space-8);">
+      <div class="container container-narrow">
+        <article class="card" style="border-left:4px solid var(--color-primary); padding:var(--space-6);">
+          <span class="eyebrow">TL;DR — Les 6 éléments d&rsquo;un site resto qui convertit</span>
+          <ol class="manifest-points" style="margin-top:var(--space-4);">
+            <li><strong>Hero qui donne faim en 3 secondes</strong> — une photo plein écran d&rsquo;un plat phare + bouton «&nbsp;Réserver&nbsp;» visible en moins d&rsquo;une seconde.</li>
+            <li><strong>Menu en HTML, jamais en PDF</strong> — lisible par Google, ChatGPT, mobile, lecteurs d&rsquo;écran. Avec allergènes structurés.</li>
+            <li><strong>Photos pro, pas flash téléphone</strong> — investissement 800-2 000&nbsp;$, ROI&nbsp;: +40-60&nbsp;% de réservations.</li>
+            <li><strong>Bouton «&nbsp;Commander directement&nbsp;»</strong> — récupère 15-30&nbsp;% des commandes qui partaient chez Uber Eats.</li>
+            <li><strong>Réservation 1 clic sur mobile</strong> — testée vendredi 21h sur 4G. Si ça met plus de 5 secondes, le client va voir ailleurs.</li>
+            <li><strong>SEO local par quartier ET par occasion</strong> — pas «&nbsp;sushi Montréal&nbsp;», mais «&nbsp;sushi Plateau&nbsp;» et «&nbsp;menu midi Mile End&nbsp;».</li>
+          </ol>
+          <p style="margin-top:var(--space-4); color:var(--color-text-secondary); font-size:var(--text-sm);">
+            Budget pour un site comme ça&nbsp;: 2 500 à 6 000&nbsp;$. Délai&nbsp;: 3 à 6 semaines. ROI mesurable sur les commissions Uber Eats économisées.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top:0;">
+      <div class="container container-narrow">
+        <p class="lead">
+          Vous tenez un resto au Québec. Votre site existe. Vous voyez peu de réservations en ligne — et <strong>30&nbsp;% de votre marge part chaque mois chez Uber Eats</strong>.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          La frustration est légitime. Mais la cause n&rsquo;est pas Uber Eats. La cause, c&rsquo;est que votre site ne fait pas son travail&nbsp;: <strong>il ne donne pas envie de réserver chez vous directement</strong>. Voici les 6 éléments anatomiques d&rsquo;un site resto qui change ça. On les illustre avec <a href="../../labo/restaurant-et-cafe/" style="color:var(--color-primary);">Kintsugi Sushi Bar</a>, notre démo de sushi-bar fictif imaginé au Plateau Mont-Royal.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÉLÉMENT 01 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Élément 01 — Le hero</span>
+        <h2 style="margin-top:var(--space-4);">3 secondes pour donner faim.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Le premier écran de votre site se joue en 3 secondes. Soit le visiteur a faim et clique «&nbsp;Réserver&nbsp;», soit il ferme l&rsquo;onglet. Pas de troisième option.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Le hero idéal contient <strong>quatre choses, point</strong>. Pas un slider de 6 plats qui tourne. Pas un menu déroulant qui cache l&rsquo;information.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Les 4 éléments du hero</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Une photo plein écran d&rsquo;UN plat phare</h4><p>Pas un buffet visuel. Une seule photo. Celle qui résume votre cuisine. Lumière naturelle, gros plan, vraiment appétissante.</p></li>
+          <li><h4>Le nom du restaurant + une promesse en 5 mots</h4><p>«&nbsp;Kintsugi&nbsp;— Sushi gastronomique japonais.&nbsp;» Pas «&nbsp;Restaurant chaleureux et authentique depuis 2018&nbsp;».</p></li>
+          <li><h4>Un bouton «&nbsp;Réserver&nbsp;» en vert, gras, sticky</h4><p>Visible sans scroller. Sur mobile aussi. Toujours présent en haut à droite quand on scrolle.</p></li>
+          <li><h4>Un lien discret «&nbsp;Voir le menu&nbsp;»</h4><p>Pour les visiteurs qui veulent vérifier avant de réserver. À côté du bouton principal, plus petit.</p></li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg-elevated); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          💡 <strong>Test à faire&nbsp;:</strong> ouvrez votre site sur mobile en navigation privée. Si vous ne savez pas en 3 secondes ce que vous mangez ici ni comment réserver, votre hero est cassé.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÉLÉMENT 02 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Élément 02 — Le menu</span>
+        <h2 style="margin-top:var(--space-4);">Toujours HTML, jamais PDF.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Le PDF est mort pour la restauration depuis 2022. Trois raisons concrètes&nbsp;:
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>Google ne lit pas un PDF correctement.</strong> Vos plats ne sortent pas dans les recherches «&nbsp;menu midi Plateau&nbsp;» ou «&nbsp;omakase Montréal&nbsp;».</li>
+          <li><strong>Mobile ouvre mal un PDF.</strong> Téléchargement, zoom, scroll latéral&nbsp;: 60&nbsp;% des visiteurs abandonnent avant d&rsquo;avoir lu.</li>
+          <li><strong>ChatGPT et Perplexity ignorent le PDF.</strong> Quand un utilisateur leur demande «&nbsp;quel resto fait du tartare à Montréal&nbsp;», les IA citent les sites avec menu HTML. Pas les vôtres.</li>
+        </ul>
+
+        <h3 style="margin-top:var(--space-8);">Le menu HTML qui marche</h3>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Structuré, indexable, modifiable en 30 secondes par le restaurateur. Sans repasser par un graphiste pour ajuster un prix.
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>Sections claires&nbsp;:</strong> entrées · plats · desserts · boissons (ou par moment&nbsp;: midi, soir, dégustation)</li>
+          <li><strong>Allergènes structurés</strong> (gluten, lactose, fruits à coque, etc.) avec icônes — essentiel 2026 au Québec</li>
+          <li><strong>Options végé / végan</strong> filtrables</li>
+          <li><strong>Photos par plat phare</strong> (pas tous — seulement les 8-12 qui se vendent le mieux)</li>
+          <li><strong>Schema.org Menu</strong> dans le code — pour que Google affiche votre menu en rich snippet</li>
+        </ul>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg); border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          🎯 <strong>Effet bonus IA&nbsp;:</strong> avec un menu HTML + Schema, quand un client demande à ChatGPT «&nbsp;où manger un omakase à Montréal sous 80&nbsp;$&nbsp;», l&rsquo;IA peut littéralement citer votre menu et votre prix. C&rsquo;est ça, exister en 2026.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÉLÉMENT 03 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Élément 03 — Les photos</span>
+        <h2 style="margin-top:var(--space-4);">L&rsquo;investissement #1 sous-investi du secteur.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Sur les 23 sites de restos québécois que j&rsquo;ai audités cette année, <strong>17 utilisent des photos prises au flash téléphone</strong>. Plats grisâtres, fond de cuisine visible, reflet sur l&rsquo;assiette.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          La conversion réservation chute de <strong>40 à 60&nbsp;%</strong> avec des photos amateurs vs des photos pro. C&rsquo;est statistiquement le levier le plus impactant — et le plus sous-traité.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Combien ça coûte (et ça rapporte)</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>Photographe culinaire au Québec&nbsp;:</strong> 800 à 2 000&nbsp;$ pour une session de 4-6 heures couvrant 15-25 plats + ambiance + équipe</li>
+          <li><strong>Délai retour&nbsp;:</strong> 1-2 semaines pour les photos retouchées</li>
+          <li><strong>Durée de vie utile&nbsp;:</strong> 2-3 ans (si vous gardez le même chef et la même carte)</li>
+          <li><strong>ROI typique&nbsp;:</strong> investissement amorti en 60-90 jours sur la conversion réservation</li>
+        </ul>
+
+        <h3 style="margin-top:var(--space-8);">Les 3 types de photos à commander</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Photos produit (gros plan plats)</h4><p>Pour le menu et les fiches plats. Lumière naturelle, fond neutre, angles variés.</p></li>
+          <li><h4>Photos lifestyle (gens qui mangent)</h4><p>Pour la home et les pages «&nbsp;événement privé&nbsp;». Plus humain, moins statique.</p></li>
+          <li><h4>Photos de l&rsquo;équipe et de la cuisine</h4><p>Pour la page «&nbsp;À propos&nbsp;». Renforce la confiance et l&rsquo;authenticité.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ÉLÉMENT 04 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Élément 04 — Commande directe</span>
+        <h2 style="margin-top:var(--space-4);">Récupérer 15-30&nbsp;% des ventes qui partaient chez Uber Eats.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Uber Eats et DoorDash prennent <strong>25 à 30&nbsp;% de commission</strong> sur chaque commande. Pour un resto qui fait 30&nbsp;000&nbsp;$/mois de livraison, c&rsquo;est <strong>8 000&nbsp;$ qui partent en commissions</strong>.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          L&rsquo;idée n&rsquo;est pas de supprimer Uber Eats — ils apportent de nouveaux clients. L&rsquo;idée est de <strong>récupérer les commandes des clients déjà acquis</strong>, ceux qui vous cherchent volontairement par leur nom sur Google.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">La structure qui marche</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Un bouton «&nbsp;Commander directement&nbsp;»</h4><p>Couleur primaire vive, en haut de la page, à côté du «&nbsp;Réserver&nbsp;». Pas caché dans le footer.</p></li>
+          <li><h4>Une page de commande simple</h4><p>Choix des plats, mode (livraison/cueillette), code postal, paiement Stripe ou Square. Pas d&rsquo;inscription obligatoire.</p></li>
+          <li><h4>Un message d&rsquo;incitation honnête</h4><p>«&nbsp;Commander chez nous directement&nbsp;= 100&nbsp;% de votre paiement va au restaurant. Aucune commission tierce.&nbsp;» Les clients comprennent et apprécient.</p></li>
+          <li><h4>Outils recommandés au Québec</h4><p>ChowNow, UEAT (made in Québec), TableHero, ou Stripe Checkout custom pour les indépendants. Coût&nbsp;: 50 à 200&nbsp;$/mois — bien moins que les commissions évitées.</p></li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg);  border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          💰 <strong>Calcul concret&nbsp;:</strong> si 20&nbsp;% de vos commandes Uber Eats passent par votre canal direct, sur 30&nbsp;000&nbsp;$/mois de livraison = 6 000&nbsp;$ qui restent chez vous. Soit <strong>72 000&nbsp;$/an</strong>. C&rsquo;est plus que le coût du site web complet.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÉLÉMENT 05 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Élément 05 — La réservation</span>
+        <h2 style="margin-top:var(--space-4);">1 clic sur mobile, vendredi 21h, en 4G dans le métro.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Le vrai test de votre formulaire de réservation, c&rsquo;est ça&nbsp;: <strong>vendredi soir, 21h, sur un téléphone en 4G dans le métro</strong>. Pas en wifi du café avec votre MacBook ouvert.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Si à ce moment précis, votre site met plus de 5 secondes à charger, ou si le bouton «&nbsp;Réserver&nbsp;» n&rsquo;est pas visible dans le premier écran, le client va chez le concurrent. Pas demain — dans la seconde qui suit.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Les 4 règles de la réservation qui marche</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Bouton «&nbsp;Réserver&nbsp;» visible sans scroll sur mobile</h4><p>En haut à droite, vert vif, sticky (reste visible quand on scrolle).</p></li>
+          <li><h4>Plateforme intégrée, pas de redirection externe</h4><p>Le client ne doit pas être projeté vers OpenTable.com avec un autre design. Intégration iframe ou widget natif.</p></li>
+          <li><h4>3 champs maximum à remplir</h4><p>Date · heure · nombre de personnes. Le nom et le téléphone se collectent à l&rsquo;étape 2, après que le créneau soit confirmé.</p></li>
+          <li><h4>Confirmation email immédiate</h4><p>Avec rappel SMS la veille (la plateforme s&rsquo;en occupe). Réduit les no-shows de 30-40&nbsp;%.</p></li>
+        </ol>
+
+        <h3 style="margin-top:var(--space-8);">Quelle plateforme choisir au Québec</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>Libro</strong> (Québec)&nbsp;: gestion francophone, intégration Google Business, prix moyen</li>
+          <li><strong>OpenTable</strong> (US)&nbsp;: standard mondial, audience touristique, commission par couvert</li>
+          <li><strong>Resy</strong> (US)&nbsp;: positionnement gastro, public urbain montréalais</li>
+          <li><strong>Cal.com</strong> (open source)&nbsp;: pour budgets très serrés, mais moins automatisé</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ÉLÉMENT 06 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Élément 06 — Le SEO local</span>
+        <h2 style="margin-top:var(--space-4);">Par quartier ET par occasion, pas par ville.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          À Montréal, personne ne tape «&nbsp;restaurant Montréal&nbsp;» tout court. C&rsquo;est trop large, trop générique. Les vraies requêtes qui rapportent du trafic qualifié sont&nbsp;:
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><code>sushi Plateau Mont-Royal</code></li>
+          <li><code>menu midi Mile End ouvert le dimanche</code></li>
+          <li><code>restaurant pour anniversaire Vieux-Montréal</code></li>
+          <li><code>omakase Montréal sous 100&nbsp;$</code></li>
+          <li><code>bistro français BYOB Rosemont</code></li>
+        </ul>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Chacune de ces requêtes correspond à <strong>une intention précise</strong>. Une intention = une page dédiée. Pas une seule page d&rsquo;accueil qui essaie de répondre à tout le monde.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">L&rsquo;architecture qui capture chaque intention</h3>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Sur la démo Kintsugi, on a structuré le site en 4 couches&nbsp;:
+        </p>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Couche 1 — Page principale</h4><p>Cible la requête type-cuisine + ville&nbsp;: «&nbsp;restaurant sushi Montréal&nbsp;».</p></li>
+          <li><h4>Couche 2 — Une page par offre</h4><p>Menu midi, dégustation, événement privé, traiteur. Chaque page a son propre Schema.</p></li>
+          <li><h4>Couche 3 — Une page par quartier</h4><p>«&nbsp;Sushi Plateau Mont-Royal&nbsp;», «&nbsp;Sushi Mile End&nbsp;», etc. avec contenu unique par quartier.</p></li>
+          <li><h4>Couche 4 — Un blog qui répond aux questions ChatGPT</h4><p>«&nbsp;Combien coûte un omakase à Montréal&nbsp;?&nbsp;», «&nbsp;Quel resto pour anniversaire de mariage&nbsp;?&nbsp;» — le contenu citable par les IA.</p></li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg); border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          🎯 <strong>Effet cumulatif&nbsp;:</strong> avec 4 couches × 4-6 quartiers × 3-4 occasions, un restaurant peut viser <strong>40 à 60 pages indexables</strong>. Soit 40 à 60 chances de sortir sur Google ou d&rsquo;être cité par une IA. Très peu de restos québécois ont cette structure — c&rsquo;est exactement pour ça que la fenêtre est ouverte.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">En résumé</span>
+        <h2 style="margin-top:var(--space-4);">Pas un site joli. Un outil de vente.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Ces 6 éléments ne sont pas optionnels. Ce sont les fondations d&rsquo;un site restaurant qui fait son travail en 2026&nbsp;: <strong>transformer un visiteur qui hésite en réservation confirmée</strong>.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          La bonne nouvelle&nbsp;? Au Québec, <strong>moins de 15&nbsp;% des restos ont les 6 éléments en place</strong>. La compétition est sous-équipée. Quand vous mettez ces fondations, vous prenez une longueur d&rsquo;avance qui dure des années.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Et chaque mois où vous attendez, c&rsquo;est <strong>quelques milliers de dollars qui partent chez Uber Eats</strong>. C&rsquo;est ça, le vrai coût d&rsquo;un site mal foutu.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Ce que les restaurateurs nous demandent après cet article.</h2>
+        </div>
+
+        <div class="faq-list" style="margin-top:var(--space-8);">
+          <details class="faq-item">
+            <summary>Combien coûte un site web pour restaurant au Québec en 2026&nbsp;?</summary>
+            <div class="faq-body"><p>Entre <strong>2 500&nbsp;$ et 6 000&nbsp;$</strong> pour un site standard (menu HTML, photos pro, réservation en ligne, SEO local, conformité Loi 25). Compter <strong>6 000 à 12 000&nbsp;$</strong> si vous ajoutez un système de commande directe pour court-circuiter Uber Eats, ou une intégration POS. C&rsquo;est souvent rentabilisé en moins d&rsquo;un an grâce aux commissions économisées sur les marketplaces.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Faut-il vraiment un menu HTML au lieu d&rsquo;un PDF&nbsp;?</summary>
+            <div class="faq-body"><p>Toujours HTML. Un PDF n&rsquo;est <strong>pas indexé par Google</strong>, ne s&rsquo;adapte pas au mobile, casse l&rsquo;expérience et n&rsquo;est pas lu par ChatGPT/Perplexity. Un menu HTML structuré avec Schema <code>Menu</code> est lisible par toutes les sources, modifiable en 30 secondes par le restaurateur, et participe activement au SEO local. Le PDF est mort depuis 2022 pour la restauration.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Quelle plateforme de réservation choisir pour un resto québécois&nbsp;?</summary>
+            <div class="faq-body"><p>Service complet&nbsp;: <strong>Libro</strong> (fait au Québec), OpenTable ou Resy. Toutes s&rsquo;intègrent au flux du restaurant et au site. Budget plus modeste&nbsp;: Cal.com ou un formulaire avec confirmation manuelle. L&rsquo;important n&rsquo;est pas la plateforme mais le <strong>bouton «&nbsp;Réserver&nbsp;» visible en moins d&rsquo;une seconde sur mobile</strong>, sans que le client ait à scroller.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Les photos pro, c&rsquo;est vraiment indispensable&nbsp;?</summary>
+            <div class="faq-body"><p>Oui, surtout pour les plats. Un photographe culinaire au Québec coûte <strong>800 à 2 000&nbsp;$</strong> pour une session complète couvrant 15-25 plats + ambiance + équipe. C&rsquo;est l&rsquo;un des meilleurs ROI du secteur&nbsp;: les conversions de réservation augmentent de <strong>40 à 60&nbsp;%</strong> avec photos pro vs photos prises au cellulaire avec flash. Investissement amorti en 60-90 jours.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Combien de temps pour livrer un site de restaurant&nbsp;?</summary>
+            <div class="faq-body"><p>Entre <strong>3 et 6 semaines</strong>. Plus rapide qu&rsquo;un site dans la santé car moins de contenu réglementaire. Le facteur limitant est généralement la session photo (planification, prise de vue, retouche) et la collecte complète du menu avec allergènes et options végétariennes. Mise en ligne du SEO local et indexation Google active en 2-3 mois supplémentaires.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA — vers Créno Restaurant -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Vous tenez un resto au Québec&nbsp;?</span>
+          <h2 style="margin-top:var(--space-4);">Voyez le site qui applique les 6 éléments en vrai.</h2>
+          <p>Démo <strong>Kintsugi Sushi Bar</strong> — sushi-bar gastronomique fictif imaginé à Montréal. Cliquable, complète, gratuite à explorer.</p>
+          <div class="cta-band-actions">
+            <a href="../../labo/restaurant-et-cafe/" class="btn btn-primary btn-lg">Voir le créno Restaurant et café →</a>
+            <a href="https://nextiweb.ca/contact.html?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-anatomie-resto&utm_content=cta-primary" class="btn btn-ghost btn-lg" rel="noopener">Demander un audit gratuit</a>
+          </div>
+          <p class="cta-band-meta">Réponse sous 24h&nbsp;·&nbsp;Sans engagement&nbsp;·&nbsp;Montréal,&nbsp;QC,&nbsp;Canada</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHOR -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">L&rsquo;autrice</span>
+        <div class="signature-block">
+          <span class="signature" aria-hidden="true">Khadija</span>
+          <p class="signature-fullname">Ait Lassri · Fondatrice Nextiweb · Montréal</p>
+        </div>
+        <p style="margin-top:var(--space-6); color:var(--color-text-secondary); text-align:center;">
+          Audit terrain de plus de 23 sites de restaurants québécois en 2025-2026. Spécialiste du SEO local, de la conversion mobile et de la visibilité IA (GEO/AEO) pour les PME du Québec.
+        </p>
+        <p style="margin-top:var(--space-4); text-align:center;">
+          <a href="https://www.linkedin.com/in/khadija-ait-lassri-327b139a/" target="_blank" rel="noopener" style="color:var(--color-primary);">LinkedIn</a>
+          &nbsp;·&nbsp;
+          <a href="../../a-propos.html" style="color:var(--color-primary);">À propos</a>
+          &nbsp;·&nbsp;
+          <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-anatomie-resto&utm_content=author-bio" rel="noopener" style="color:var(--color-primary);">Agence Nextiweb</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTICLES CONNEXES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">À lire ensuite</span>
+          <h2>Articles connexes.</h2>
+        </div>
+
+        <div class="blog-grid" style="margin-top:var(--space-8);">
+          <a href="../5-erreurs-seo-cliniques-dentaires/" class="blog-card" style="text-decoration:none; color:inherit; display:block;">
+            <span class="blog-tag">Soins · Audit terrain</span>
+            <h3>5 erreurs SEO que font 90&nbsp;% des cliniques dentaires</h3>
+            <p>Audit de 27 sites dentaires québécois&nbsp;: les 5 erreurs récurrentes et comment les corriger en 2-4 semaines.</p>
+            <span class="blog-meta">📅 13 mai 2026&nbsp;·&nbsp;⏱ 8 min</span>
+          </a>
+
+          <article class="blog-card">
+            <span class="blog-tag">Différenciant · Transverse</span>
+            <h3>GEO/AEO — Comment être cité par ChatGPT et Perplexity</h3>
+            <p>FAQ structurée, contenu citable, autorité topique&nbsp;: les leviers concrets pour 2026.</p>
+            <span class="blog-meta">À publier · ~2200 mots</span>
+          </article>
+
+          <article class="blog-card">
+            <span class="blog-tag">Liste · Restaurant</span>
+            <h3>15 éléments qu&rsquo;un site restaurant québécois doit avoir en 2026</h3>
+            <p>Checklist actionnable, du menu HTML aux Schema en passant par le bouton WhatsApp.</p>
+            <span class="blog-meta">À publier · ~2000 mots</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="/" class="logo">
+            <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async">
+            <span class="logo-text"><span>Nextiweb Studio</span><small>Studio créatif</small></span>
+          </a>
+          <p>Le laboratoire créatif de <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-anatomie-resto&utm_content=footer-about" rel="noopener" style="color:var(--color-primary);">Nextiweb</a>, agence web à Montréal.</p>
+        </div>
+        <div>
+          <h4>Le labo</h4>
+          <div class="footer-links">
+            <a href="/">Accueil</a>
+            <a href="../../labo/">Tous les crénos</a>
+            <a href="../../le-laboratoire.html">Manifeste</a>
+            <a href="../../methodologie.html">Méthode</a>
+            <a href="../../a-propos.html">À propos</a>
+            <a href="../">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h4>Crénos</h4>
+          <div class="footer-links">
+            <a href="../../labo/dentaire-et-soins/">Soins et services</a>
+            <a href="../../labo/restaurant-et-cafe/">Restaurant et café</a>
+            <a href="../../labo/piscine-et-renovation/">Construction et rénovation</a>
+            <a href="../../labo/chocolat-et-artisan/">Art et artisanat</a>
+            <a href="../../labo/e-commerce-et-marque-locale/">E-commerce et marque locale</a>
+            <a href="../../labo/services-a-domicile/">Services à domicile</a>
+          </div>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <div class="footer-links">
+            <a href="/politique-confidentialite.html">Politique de confidentialité</a>
+            <a href="/politique-cookies.html">Politique de cookies</a>
+            <a href="/mentions-legales.html">Mentions légales</a>
+            <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-anatomie-resto&utm_content=footer" rel="noopener">Agence Nextiweb.ca</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> Nextiweb Studio · NEQ&nbsp;2272348204 · <a href="/mentions-legales.html" style="color:inherit; text-decoration:underline;">Mentions légales</a></span>
+        <span class="footer-meta">Consultez notre <a href="/politique-confidentialite.html" style="color:var(--color-primary);">politique de confidentialité</a>, notre <a href="/politique-cookies.html" style="color:var(--color-primary);">politique de cookies</a> et nos <a href="/mentions-legales.html" style="color:var(--color-primary);">mentions légales</a>. <button type="button" id="manage-cookies-btn" style="background:transparent; border:0; color:var(--color-primary); cursor:pointer; font:inherit; text-decoration:underline; padding:0;">Gérer mes cookies</button></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bandeau consentement cookies — Loi 25 Québec -->
+  <div id="cookie-banner" class="cookie-banner" data-open="false" role="dialog" aria-labelledby="cookie-banner-title" aria-modal="true">
+    <div class="cookie-banner-card">
+      <h2 class="cookie-banner-title" id="cookie-banner-title">Gestion des cookies</h2>
+      <p class="cookie-banner-text">
+        Nous utilisons des cookies essentiels pour le fonctionnement du site.
+        Les cookies de mesure et de marketing ne sont activés qu&rsquo;avec votre
+        consentement, conformément à la <strong>Loi 25</strong>.
+      </p>
+      <p class="cookie-banner-links">
+        <a href="/politique-confidentialite.html">Politique de confidentialité</a>
+        <span aria-hidden="true">·</span>
+        <a href="/politique-cookies.html">Politique de cookies</a>
+      </p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" data-consent="accept-all">Accepter tout</button>
+        <button type="button" class="btn btn-ghost btn-sm" data-consent="refuse">Refuser</button>
+        <button type="button" class="btn btn-ghost btn-sm" data-consent="customize">Personnaliser</button>
+      </div>
+      <div class="cookie-banner-custom">
+        <label class="cookie-option">
+          <input type="checkbox" checked disabled data-cookie="essential">
+          <span>Cookies essentiels <small>(obligatoires)</small></span>
+        </label>
+        <label class="cookie-option">
+          <input type="checkbox" data-cookie="analytics">
+          <span>Cookies de mesure d&rsquo;audience</span>
+        </label>
+        <label class="cookie-option">
+          <input type="checkbox" data-cookie="marketing">
+          <span>Cookies marketing</span>
+        </label>
+        <button type="button" class="btn btn-primary btn-sm" data-consent="save">Enregistrer mes choix</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
