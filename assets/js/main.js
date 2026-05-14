@@ -96,11 +96,22 @@
     el.textContent = new Date().getFullYear();
   });
 
-  // ---------- 7. GESTIONNAIRE COOKIES (Loi 25) ----------
+  // ---------- 7. GESTIONNAIRE COOKIES (Loi 25 + Google Consent Mode v2) ----------
   // 3 niveaux : Accepter tout / Refuser / Personnaliser (granular)
   const CONSENT_KEY = 'nws-consent';
   const CONSENT_VERSION = '2'; // bump car format granulaire
   const banner = document.getElementById('cookie-banner');
+
+  // Helper : pousse le consent vers Google Tag Manager / GA4
+  const pushConsentToGTM = (analytics, marketing) => {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('consent', 'update', {
+      'analytics_storage': analytics ? 'granted' : 'denied',
+      'ad_storage': marketing ? 'granted' : 'denied',
+      'ad_user_data': marketing ? 'granted' : 'denied',
+      'ad_personalization': marketing ? 'granted' : 'denied'
+    });
+  };
 
   if (banner) {
     const stored = localStorage.getItem(CONSENT_KEY);
@@ -109,7 +120,7 @@
     if (!isValid) {
       requestAnimationFrame(() => banner.setAttribute('data-open', 'true'));
     } else {
-      // Restaure l'état des checkboxes depuis le choix précédent
+      // Restaure l'état des checkboxes ET applique le consent au GTM
       try {
         const payload = stored.split(':').slice(1, -1).join(':'); // au cas où JSON contient ':'
         const choice = JSON.parse(payload);
@@ -117,6 +128,8 @@
         const marketingBox = banner.querySelector('[data-cookie="marketing"]');
         if (analyticsBox) analyticsBox.checked = !!choice.analytics;
         if (marketingBox) marketingBox.checked = !!choice.marketing;
+        // Pousse le consent stocké vers GTM dès le chargement
+        pushConsentToGTM(!!choice.analytics, !!choice.marketing);
       } catch (e) { /* ignore */ }
     }
 
@@ -141,6 +154,8 @@
       localStorage.setItem(CONSENT_KEY, value);
       banner.setAttribute('data-open', 'false');
       document.dispatchEvent(new CustomEvent('nws:consent', { detail: choice }));
+      // Pousse le nouveau consent vers GTM (Consent Mode v2)
+      pushConsentToGTM(analytics, marketing);
     };
 
     const acceptAllBtn = banner.querySelector('[data-consent="accept-all"]');
