@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00e676">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Google Consent Mode v2 — défauts Loi 25 (deny par défaut) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TFK5VQB5');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Comment être cité par ChatGPT et Perplexity en 2026 (showcase + tests) | Nextiweb Studio</title>
+  <meta name="description" content="Les 6 leviers techniques qu'on a appliqués sur les 6 démos du studio pour être cité par les IA + 5 tests gratuits que vous pouvez faire vous-même sur votre site.">
+  <link rel="canonical" href="https://nextiwebstudio.ca/blog/geo-aeo-comment-etre-cite-chatgpt/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="CA-QC">
+  <meta name="geo.placename" content="Montréal">
+  <meta name="author" content="Khadija Ait Lassri — Nextiweb Studio">
+  <meta name="keywords" content="GEO AEO Québec, être cité ChatGPT, citation Perplexity, SEO IA 2026, llms.txt, Schema.org PME Québec">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:site_name" content="Nextiweb Studio">
+  <meta property="og:title" content="Comment être cité par ChatGPT et Perplexity en 2026">
+  <meta property="og:description" content="Les 6 leviers techniques qu'on a appliqués sur les 6 démos du studio + 5 tests gratuits pour évaluer si votre site est citable par les IA.">
+  <meta property="og:url" content="https://nextiwebstudio.ca/blog/geo-aeo-comment-etre-cite-chatgpt/">
+  <meta property="og:image" content="https://nextiwebstudio.ca/assets/images/og-methodologie.jpg">
+  <meta property="article:published_time" content="2026-05-13T13:00:00-04:00">
+  <meta property="article:modified_time" content="2026-05-13T13:00:00-04:00">
+  <meta property="article:author" content="Khadija Ait Lassri">
+  <meta property="article:section" content="GEO/AEO">
+  <meta property="article:tag" content="ChatGPT">
+  <meta property="article:tag" content="Perplexity">
+  <meta property="article:tag" content="Schema.org">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="icon" type="image/png" href="../../assets/images/favicon-nextiweb-infini.png">
+  <link rel="apple-touch-icon" href="../../assets/images/favicon-nextiweb-infini.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nextiwebstudio.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://nextiwebstudio.ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Comment être cité par ChatGPT et Perplexity", "item": "https://nextiwebstudio.ca/blog/geo-aeo-comment-etre-cite-chatgpt/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comment être cité par ChatGPT et Perplexity en 2026 (showcase + 5 tests gratuits)",
+    "description": "Les 6 leviers techniques qu'on a appliqués sur les 6 démos du studio pour être cité par les IA + 5 tests gratuits que vous pouvez faire vous-même sur votre site.",
+    "image": "https://nextiwebstudio.ca/assets/images/og-methodologie.jpg",
+    "datePublished": "2026-05-13T13:00:00-04:00",
+    "dateModified": "2026-05-13T13:00:00-04:00",
+    "author": {
+      "@type": "Person",
+      "@id": "https://nextiwebstudio.ca/#khadija",
+      "name": "Khadija Ait Lassri",
+      "jobTitle": "Fondatrice de Nextiweb",
+      "url": "https://nextiwebstudio.ca/a-propos.html",
+      "sameAs": ["https://www.linkedin.com/in/khadija-ait-lassri-327b139a/"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nextiweb Studio",
+      "url": "https://nextiwebstudio.ca/",
+      "logo": { "@type": "ImageObject", "url": "https://nextiwebstudio.ca/assets/images/logo-nextiweb-light.png" }
+    },
+    "mainEntityOfPage": "https://nextiwebstudio.ca/blog/geo-aeo-comment-etre-cite-chatgpt/",
+    "inLanguage": "fr-CA",
+    "about": [
+      { "@type": "Thing", "name": "Generative Engine Optimization (GEO)" },
+      { "@type": "Thing", "name": "Answer Engine Optimization (AEO)" },
+      { "@type": "Thing", "name": "Schema.org" }
+    ],
+    "keywords": "GEO AEO Québec, ChatGPT citations, Perplexity SEO, llms.txt, Schema.org, PME Québec"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Combien de temps avant d'être cité par ChatGPT après avoir tout mis en place ?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 2 et 8 semaines pour les premières citations. Plus rapide que le SEO Google traditionnel : les modèles IA recrawlent activement les sites avec du contenu structuré tous les 7-14 jours. La pleine montée en visibilité IA arrive vers 3-6 mois, en parallèle de la consolidation de votre autorité topique." } },
+      { "@type": "Question", "name": "Mon site doit-il avoir un llms.txt pour être cité ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, ce n'est pas obligatoire — mais c'est un signal fort. Le fichier llms.txt (proposé par Anthropic en 2024 et adopté progressivement par les LLMs commerciaux) sert de carte du contenu citable de votre site. Sans llms.txt, les IA peuvent toujours vous citer via Schema.org et le contenu HTML. Avec llms.txt, vous augmentez vos chances d'être cité correctement. Coût : 0 $, gain : significatif." } },
+      { "@type": "Question", "name": "Faut-il bloquer ou autoriser les bots IA dans le robots.txt ?", "acceptedAnswer": { "@type": "Answer", "text": "Autorisez-les si vous voulez être cité. Les bots à autoriser explicitement : GPTBot et OAI-SearchBot (OpenAI), ClaudeBot et Claude-Web (Anthropic), PerplexityBot (Perplexity), Google-Extended (Google AI), Applebot-Extended (Apple Intelligence). Bloquer ces bots = invisibilité totale dans les réponses IA. C'est l'erreur silencieuse la plus coûteuse de 2026." } },
+      { "@type": "Question", "name": "GEO et AEO, c'est la même chose ?", "acceptedAnswer": { "@type": "Answer", "text": "Très proche mais nuancé. GEO (Generative Engine Optimization) = optimiser pour les moteurs génératifs comme ChatGPT, Perplexity, Gemini. AEO (Answer Engine Optimization) = optimiser pour les moteurs de réponse, ce qui inclut aussi 'People Also Ask' Google, les featured snippets, Alexa, Siri. En pratique, les techniques se recoupent à 80 % : structure citable, FAQ, schémas, autorité humaine. On utilise les deux termes ensemble pour parler de la même chose : être présent quand un humain pose une question à une machine." } },
+      { "@type": "Question", "name": "Comment savoir si ChatGPT cite déjà mon site ?", "acceptedAnswer": { "@type": "Answer", "text": "Le plus simple : posez à ChatGPT (mode connecté à internet) la question type que vos clients posent. Exemple : 'Quel dentiste à Montréal accepte les patients anxieux ?' Si votre nom apparaît dans la réponse, vous êtes cité. Si non, regardez quelles sources ChatGPT cite — ce sont vos concurrents directs en visibilité IA. Faites le même test sur Perplexity (https://perplexity.ai) qui affiche systématiquement ses sources." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFK5VQB5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Nextiweb Studio, accueil">
+        <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async">
+        <span class="logo-text"><span>Nextiweb Studio</span><small>Studio créatif</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span></button>
+      <nav id="primary-nav" class="nav" aria-label="Navigation principale">
+        <a href="../../labo/" class="nav-link">Le labo</a>
+        <a href="../../le-laboratoire.html" class="nav-link">Manifeste</a>
+        <a href="../../methodologie.html" class="nav-link">Méthode</a>
+        <a href="../../a-propos.html" class="nav-link">À propos</a>
+        <a href="../" class="nav-link" aria-current="page">Blog</a>
+        <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-geo-aeo&utm_content=nav-cta" class="btn btn-secondary btn-sm nav-cta" rel="noopener">Visiter Nextiweb.ca →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ARTICLE HERO -->
+    <section class="sector-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container container-narrow">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/" aria-label="Accueil" class="bc-home"><svg class="ico ico-home" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a><span>/</span><a href="../">Blog</a><span>/</span><span>Comment être cité par ChatGPT et Perplexity</span>
+        </nav>
+        <span class="eyebrow">GEO / AEO · Différenciant 2026</span>
+        <h1 class="reveal" style="margin-top:var(--space-6);">
+          Comment être cité par ChatGPT<br>
+          <span class="text-gradient">et Perplexity en 2026.</span>
+        </h1>
+        <p class="lead reveal" style="margin-top:var(--space-6);">
+          Ce qu&rsquo;on a fait sur les 6 démos du studio + 5 tests gratuits que vous pouvez faire vous-même.
+        </p>
+        <p style="margin-top:var(--space-4); font-family:var(--font-mono); font-size:var(--text-sm); color:var(--color-text-muted);">
+          📅 13 mai 2026&nbsp;·&nbsp;⏱ 12 min de lecture&nbsp;·&nbsp;✍ Par Khadija Ait Lassri
+        </p>
+      </div>
+    </section>
+
+    <!-- TL;DR -->
+    <section class="section" style="padding-top:var(--space-8);">
+      <div class="container container-narrow">
+        <article class="card" style="border-left:4px solid var(--color-primary); padding:var(--space-6);">
+          <span class="eyebrow">TL;DR — Ce que cet article vous donne</span>
+
+          <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+            <strong>30&nbsp;% des recherches passent maintenant par ChatGPT, Perplexity ou Google AI avant Google classique.</strong> Si vous n&rsquo;y êtes pas cité, vous perdez une part croissante de visibilité.
+          </p>
+
+          <h3 style="margin-top:var(--space-5);">Les 6 leviers qu&rsquo;on a appliqués sur les démos du studio&nbsp;:</h3>
+          <ol class="manifest-points" style="margin-top:var(--space-3);">
+            <li><strong>29 blocs Schema.org structurés</strong> sur 12 pages (BreadcrumbList, Service, FAQPage, Article, Person, Organization)</li>
+            <li><strong>8 FAQPage citables</strong> avec questions formulées en langage humain</li>
+            <li><strong>llms.txt à la racine</strong> (norme 2025 — carte du contenu pour LLMs)</li>
+            <li><strong>11 bots IA autorisés explicitement</strong> dans robots.txt</li>
+            <li><strong>Person Schema avec sameAs LinkedIn</strong> (E-E-A-T fort)</li>
+            <li><strong>Sitemap + canonical HTTPS</strong> sur 100&nbsp;% des pages</li>
+          </ol>
+
+          <h3 style="margin-top:var(--space-5);">Les 5 tests gratuits à faire sur votre site&nbsp;:</h3>
+          <ol class="manifest-points" style="margin-top:var(--space-3);">
+            <li>Demander directement à ChatGPT si vous êtes cité</li>
+            <li>Tester votre Schema sur Google Rich Results</li>
+            <li>Vérifier la présence de <code>application/ld+json</code> dans votre code</li>
+            <li>Inspecter votre robots.txt pour les bots IA</li>
+            <li>Tester si vous avez un llms.txt</li>
+          </ol>
+
+          <p style="margin-top:var(--space-4); color:var(--color-text-secondary); font-size:var(--text-sm);">
+            ⏱ Les 5 tests prennent <strong>15 minutes au total</strong>. Aucun outil payant.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top:0;">
+      <div class="container container-narrow">
+        <p class="lead">
+          En 2024, vos clients tapaient «&nbsp;meilleur dentiste à Montréal&nbsp;» sur Google. En 2026, beaucoup d&rsquo;entre eux posent la <em>même question</em> à <strong>ChatGPT</strong> ou à <strong>Perplexity</strong>.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          L&rsquo;IA cite 3 à 5 sources dans sa réponse. Si vous y êtes, vous gagnez un client à fort intent. Si vous n&rsquo;y êtes pas, vous n&rsquo;existez pas pour cette recherche — peu importe à quel point vous êtes bon dans la vraie vie.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Cet article fait deux choses&nbsp;: d&rsquo;abord, on vous montre <strong>concrètement ce qu&rsquo;on a fait techniquement</strong> sur les 6 démos sectorielles du studio pour devenir citables. Ensuite, on vous donne <strong>5 tests gratuits</strong> pour évaluer où vous en êtes sur votre propre site. Pas de théorie. Du concret testable.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ PARTIE 1 : SHOWCASE ============ -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Partie 1 — Ce qu&rsquo;on a fait</span>
+        <h2 style="margin-top:var(--space-4);">Les 6 leviers techniques appliqués sur les démos du studio.</h2>
+        <p class="lead" style="margin-top:var(--space-4);">
+          Pas de la théorie. Du code en production sur <a href="../../" style="color:var(--color-primary);">nextiwebstudio.ca</a>, vérifiable maintenant.
+        </p>
+      </div>
+    </section>
+
+    <!-- LEVIER 01 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Levier 01</span>
+        <h2 style="margin-top:var(--space-4);">29 blocs Schema.org structurés sur 12 pages.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Le balisage Schema.org est le <strong>format que les IA lisent en priorité</strong>. Il dit explicitement à ChatGPT, Perplexity ou Google AI&nbsp;: <em>«&nbsp;Voici qui je suis, voici ce que je propose, voici les questions auxquelles je réponds.&nbsp;»</em>
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Ce qu&rsquo;on a posé concrètement</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>Sur chaque créno</strong> (6 pages)&nbsp;: 3 schémas — <code>BreadcrumbList</code> + <code>Service</code> + <code>FAQPage</code></li>
+          <li><strong>Sur l&rsquo;Accueil</strong>&nbsp;: <code>Organization</code> + <code>WebSite</code> avec <code>SearchAction</code> + <code>FAQPage</code></li>
+          <li><strong>Sur la Méthode</strong>&nbsp;: <code>Article</code> + <code>BreadcrumbList</code> + <code>FAQPage</code></li>
+          <li><strong>Sur À propos</strong>&nbsp;: <code>AboutPage</code> + <code>Person</code> (Khadija) avec <code>sameAs</code> vers LinkedIn</li>
+          <li><strong>Sur chaque article de blog</strong>&nbsp;: <code>Article</code> + <code>FAQPage</code> + <code>BreadcrumbList</code></li>
+        </ul>
+
+        <h3 style="margin-top:var(--space-8);">Le résultat mesurable</h3>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          <strong>29 blocs JSON-LD valides, 0 erreur de syntaxe.</strong> Testé via l&rsquo;outil Rich Results de Google. Chaque page a au minimum 1 schéma structuré qui dit aux IA «&nbsp;ce contenu est citable&nbsp;».
+        </p>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg); border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          💡 <strong>Comparaison terrain&nbsp;:</strong> sur les 27 sites de cliniques dentaires québécoises auditées en 2026, <strong>seulement 4 avaient au moins UN Schema</strong>. 23 sites = invisibilité IA totale. La fenêtre d&rsquo;opportunité est immense.
+        </p>
+      </div>
+    </section>
+
+    <!-- LEVIER 02 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Levier 02</span>
+        <h2 style="margin-top:var(--space-4);">8 FAQPage avec des questions formulées en langage humain.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Les FAQPage sont le format préféré des IA pour piocher leurs réponses. Mais à condition que les questions soient formulées <strong>comme un humain les poserait</strong> — pas comme un consultant SEO.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Les bonnes questions vs les mauvaises</h3>
+
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          ❌ <strong>Mauvais (langage SEO/consultant)&nbsp;:</strong>
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-3);">
+          <li>«&nbsp;Optimisation SEO local pour secteur dentaire&nbsp;»</li>
+          <li>«&nbsp;Stratégie GEO/AEO pour PME&nbsp;»</li>
+          <li>«&nbsp;Quelles balises Schema.org utiliser&nbsp;?&nbsp;»</li>
+        </ul>
+
+        <p style="margin-top:var(--space-5); color:var(--color-text-secondary);">
+          ✅ <strong>Bon (langage entrepreneur / patient / client)&nbsp;:</strong>
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-3);">
+          <li>«&nbsp;Combien coûte un site web pour dentiste à Montréal en 2026&nbsp;?&nbsp;»</li>
+          <li>«&nbsp;Pourquoi ChatGPT et Perplexity comptent pour mon business&nbsp;?&nbsp;»</li>
+          <li>«&nbsp;Mon site actuel, comment je sais s&rsquo;il vaut quelque chose&nbsp;?&nbsp;»</li>
+        </ul>
+
+        <h3 style="margin-top:var(--space-8);">Le format des réponses citables</h3>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Chaque réponse fait <strong>50 à 300 caractères</strong>. Directe dans la première phrase. Nuance dans la deuxième. Détail optionnel ensuite. C&rsquo;est exactement ce que les IA piochent.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Les 8 FAQPage déployées</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li>6 sur les pages crénos (questions par secteur&nbsp;: prix, délai, ROI sectoriel)</li>
+          <li>1 sur la page Accueil (5 questions méta-studio)</li>
+          <li>1 sur la page Méthode (5 questions méthode)</li>
+        </ul>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Soit <strong>40+ questions structurées</strong> citables par les IA, formulées avec les vrais mots que les entrepreneurs utilisent.
+        </p>
+      </div>
+    </section>
+
+    <!-- LEVIER 03 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Levier 03</span>
+        <h2 style="margin-top:var(--space-4);">llms.txt à la racine — la nouvelle norme 2025-2026.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          <code>llms.txt</code> est un fichier proposé par Anthropic en septembre 2024 et adopté progressivement par les LLMs commerciaux. Il sert de <strong>carte du contenu citable</strong> à la racine de votre site, dans un format que les IA peuvent lire en priorité.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Ce qu&rsquo;on a mis dedans</h3>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Sur <a href="https://nextiwebstudio.ca/llms.txt" target="_blank" rel="noopener" style="color:var(--color-primary);">nextiwebstudio.ca/llms.txt</a>, vous trouvez en Markdown structuré&nbsp;:
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li>Une <strong>description courte</strong> du studio (citable telle quelle)</li>
+          <li>Le lien vers chacun des 6 crénos avec les métiers couverts</li>
+          <li>Les pages clés (Manifeste, Méthode, À propos, Blog)</li>
+          <li>Les sous-domaines des démos cliquables</li>
+          <li>L&rsquo;identification de la fondatrice avec son LinkedIn (E-E-A-T)</li>
+          <li>Une <strong>formule de citation suggérée</strong> pour les LLMs</li>
+        </ul>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg); border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          🎯 <strong>Effet&nbsp;:</strong> aujourd&rsquo;hui, moins de 0,5&nbsp;% des sites web ont un llms.txt. Sur les sites québécois, le chiffre est encore plus bas. <strong>C&rsquo;est un signal de qualité immédiat pour les LLMs</strong> et un différenciateur fort pour les 24 prochains mois.
+        </p>
+      </div>
+    </section>
+
+    <!-- LEVIER 04 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Levier 04</span>
+        <h2 style="margin-top:var(--space-4);">11 bots IA autorisés explicitement dans robots.txt.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Beaucoup de sites bloquent <strong>par défaut</strong> les bots IA — souvent sans le savoir, parce que leur hébergeur ou leur CMS le fait automatiquement. C&rsquo;est l&rsquo;<strong>erreur silencieuse la plus coûteuse de 2026</strong>.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Les bots qu&rsquo;on autorise explicitement</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><code>GPTBot</code> et <code>OAI-SearchBot</code> (OpenAI / ChatGPT)</li>
+          <li><code>ChatGPT-User</code> (recherches en direct dans ChatGPT)</li>
+          <li><code>ClaudeBot</code> et <code>Claude-Web</code> (Anthropic / Claude)</li>
+          <li><code>anthropic-ai</code> (autre crawler Anthropic)</li>
+          <li><code>PerplexityBot</code> et <code>Perplexity-User</code></li>
+          <li><code>Google-Extended</code> (Google AI Overviews et Gemini)</li>
+          <li><code>Applebot-Extended</code> (Apple Intelligence)</li>
+          <li><code>cohere-ai</code></li>
+        </ul>
+
+        <h3 style="margin-top:var(--space-8);">Les bots qu&rsquo;on bloque (à raison)</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><code>Bytespider</code> (TikTok — agressif, peu de retour)</li>
+          <li><code>MJ12bot</code> (scraper de spam SEO)</li>
+        </ul>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg-elevated); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          📂 Voir le fichier en direct&nbsp;: <a href="https://nextiwebstudio.ca/robots.txt" target="_blank" rel="noopener" style="color:var(--color-primary);">nextiwebstudio.ca/robots.txt</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- LEVIER 05 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Levier 05</span>
+        <h2 style="margin-top:var(--space-4);">Person Schema avec sameAs LinkedIn — E-E-A-T puissant.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Les IA ne citent pas les sources anonymes. <strong>Elles citent des humains identifiables avec une trace numérique vérifiable.</strong> C&rsquo;est ce que Google appelle E-E-A-T (Expertise, Experience, Authoritativeness, Trustworthiness).
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Ce qu&rsquo;on a fait pour Khadija</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>Person Schema</strong> sur les pages Accueil et À propos avec <code>@id</code> unique réutilisable</li>
+          <li><strong>jobTitle</strong>&nbsp;: «&nbsp;Fondatrice de Nextiweb&nbsp;»</li>
+          <li><strong>sameAs</strong>&nbsp;: lien vers le profil LinkedIn personnel</li>
+          <li><strong>worksFor</strong>&nbsp;: lien vers l&rsquo;Organization Nextiweb</li>
+          <li><strong>Auteur identifié sur chaque article</strong> (cet article a Khadija comme <code>Article.author</code> avec son <code>sameAs</code>)</li>
+        </ul>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg); border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          🎯 <strong>Pourquoi c&rsquo;est critique&nbsp;:</strong> quand ChatGPT cite une source sur «&nbsp;site web pour PME québécoise&nbsp;», il préfère <strong>«&nbsp;selon Khadija Ait Lassri, fondatrice de Nextiweb à Montréal&nbsp;»</strong> à <strong>«&nbsp;selon un site web anonyme&nbsp;»</strong>. L&rsquo;humanisation augmente la probabilité de citation.
+        </p>
+      </div>
+    </section>
+
+    <!-- LEVIER 06 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Levier 06</span>
+        <h2 style="margin-top:var(--space-4);">Sitemap + canonical HTTPS sur 100&nbsp;% des pages.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Pas glamour. Mais essentiel. Sans sitemap propre et canonical HTTPS sur chaque page, les IA et Google peuvent ignorer ou dupliquer votre contenu.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Ce qu&rsquo;on a vérifié</h3>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li><strong>sitemap.xml</strong> à la racine avec 17 URLs déclarées, lastmod à jour</li>
+          <li><strong>Sitemap référencé dans robots.txt</strong></li>
+          <li><strong>Canonical en HTTPS</strong> sur chacune des 17 pages (zéro erreur)</li>
+          <li><strong>hreflang fr-CA</strong> partout</li>
+          <li><strong>Pas de duplicate content</strong> entre crénos (vérifié par lecture humaine + outil)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PARTIE 2 : 5 TESTS ============ -->
+    <section class="section" style="background:linear-gradient(180deg, transparent, var(--color-primary-soft), transparent);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Partie 2 — Testez votre site</span>
+        <h2 style="margin-top:var(--space-4);">5 tests gratuits que vous pouvez faire maintenant.</h2>
+        <p class="lead" style="margin-top:var(--space-4);">
+          15 minutes au total. Aucun outil payant. Vous saurez exactement où vous en êtes.
+        </p>
+      </div>
+    </section>
+
+    <!-- TEST 01 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Test 01 — 3 min</span>
+        <h2 style="margin-top:var(--space-4);">Demandez directement à ChatGPT s&rsquo;il vous cite.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          Le test le plus direct. Le seul qui compte vraiment.
+        </p>
+
+        <h3 style="margin-top:var(--space-8);">Comment faire</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Ouvrez ChatGPT</h4><p>Mode «&nbsp;recherche en direct&nbsp;» activé (icône loupe). C&rsquo;est gratuit même sans abonnement.</p></li>
+          <li><h4>Posez la question type que vos clients poseraient</h4><p>«&nbsp;Quel [votre métier] à [votre ville] pour [votre spécificité]&nbsp;?&nbsp;» Exemple&nbsp;: «&nbsp;Quel dentiste à Montréal accepte les patients anxieux&nbsp;?&nbsp;»</p></li>
+          <li><h4>Analysez la réponse</h4><p>ChatGPT cite typiquement 3 à 5 sources avec liens. Êtes-vous dedans&nbsp;? Si non, regardez QUI est cité&nbsp;: ce sont vos concurrents en visibilité IA.</p></li>
+          <li><h4>Faites le même test sur Perplexity</h4><p>Allez sur <a href="https://perplexity.ai" target="_blank" rel="noopener" style="color:var(--color-primary);">perplexity.ai</a> (gratuit, sans inscription). Perplexity affiche systématiquement TOUTES ses sources, ce qui rend le test plus précis.</p></li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg-elevated); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          💡 <strong>Astuce&nbsp;:</strong> faites 5 versions de la même question avec des formulations différentes. Les IA répondent différemment selon les mots utilisés.
+        </p>
+      </div>
+    </section>
+
+    <!-- TEST 02 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Test 02 — 2 min</span>
+        <h2 style="margin-top:var(--space-4);">Testez votre Schema sur l&rsquo;outil officiel Google.</h2>
+
+        <h3 style="margin-top:var(--space-6);">Comment faire</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Ouvrez l&rsquo;outil Rich Results de Google</h4><p><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" style="color:var(--color-primary);">search.google.com/test/rich-results</a></p></li>
+          <li><h4>Collez l&rsquo;URL de votre page d&rsquo;accueil</h4><p>L&rsquo;outil va crawler votre page et lister les schémas détectés.</p></li>
+          <li><h4>Lisez le résultat</h4><p>Si vous voyez «&nbsp;Aucun élément amélioré détecté&nbsp;», vous n&rsquo;avez aucun Schema. Si vous voyez une liste comme «&nbsp;Organization, FAQPage, Article&nbsp;», vous avez du balisage. Plus la liste est longue, mieux c&rsquo;est.</p></li>
+          <li><h4>Répétez sur 3-4 pages clés</h4><p>Page d&rsquo;accueil, page services principaux, page contact. Toutes doivent avoir au minimum 1 schéma chacune.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TEST 03 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Test 03 — 1 min</span>
+        <h2 style="margin-top:var(--space-4);">Inspectez votre code source pour le JSON-LD.</h2>
+
+        <h3 style="margin-top:var(--space-6);">Comment faire</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Ouvrez votre site sur Chrome / Firefox / Safari</h4><p>N&rsquo;importe quelle page.</p></li>
+          <li><h4>Pressez <code>Ctrl+U</code> (Windows) ou <code>Cmd+U</code> (Mac)</h4><p>Le code source de la page s&rsquo;ouvre.</p></li>
+          <li><h4>Cherchez <code>application/ld+json</code></h4><p>Pressez <code>Ctrl+F</code>, tapez <code>application/ld+json</code>. Combien d&rsquo;occurrences trouvez-vous&nbsp;?</p></li>
+          <li><h4>Lecture du résultat</h4>
+            <ul style="margin-top:var(--space-3); padding-left:var(--space-5); color:var(--color-text-secondary);">
+              <li><strong>0 résultat</strong>&nbsp;: votre site est invisible pour les IA. Erreur critique.</li>
+              <li><strong>1-2 résultats</strong>&nbsp;: base minimale. À enrichir.</li>
+              <li><strong>3+ résultats</strong>&nbsp;: vous avez le bon réflexe technique.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg-elevated); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          🎯 <strong>Comparaison&nbsp;:</strong> sur nextiwebstudio.ca, chaque page créno a <strong>3 blocs JSON-LD</strong>. Les pages clés en ont 4 ou 5. C&rsquo;est ce niveau de densité qui rend un site «&nbsp;citable&nbsp;» par les IA.
+        </p>
+      </div>
+    </section>
+
+    <!-- TEST 04 -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">Test 04 — 2 min</span>
+        <h2 style="margin-top:var(--space-4);">Vérifiez votre robots.txt pour les bots IA.</h2>
+
+        <h3 style="margin-top:var(--space-6);">Comment faire</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Tapez votre URL + /robots.txt</h4><p>Exemple&nbsp;: <code>https://votresite.ca/robots.txt</code></p></li>
+          <li><h4>Si le fichier existe, lisez-le attentivement</h4><p>Cherchez les lignes commençant par <code>User-agent: GPTBot</code>, <code>ClaudeBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code>.</p></li>
+          <li><h4>Diagnostic</h4>
+            <ul style="margin-top:var(--space-3); padding-left:var(--space-5); color:var(--color-text-secondary);">
+              <li><strong>Vous voyez <code>Disallow: /</code> pour GPTBot / ClaudeBot</strong>&nbsp;: vous bloquez les IA. Erreur critique. Faites enlever ça immédiatement.</li>
+              <li><strong>Aucune mention des bots IA</strong>&nbsp;: par défaut autorisés, mais sans signal explicite. À améliorer en ajoutant <code>User-agent: GPTBot — Allow: /</code> et équivalents.</li>
+              <li><strong>Vous voyez <code>Allow: /</code> sur chaque bot IA</strong>&nbsp;: configuration optimale.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg); border:1px solid var(--color-primary); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          ⚠️ <strong>Cas fréquent&nbsp;:</strong> certains hébergeurs et CMS comme WordPress, Wix, Squarespace bloquent par défaut les bots IA «&nbsp;pour protéger les données&nbsp;». C&rsquo;est leur choix, pas le vôtre. Vous pouvez (et devez) l&rsquo;ignorer.
+        </p>
+      </div>
+    </section>
+
+    <!-- TEST 05 -->
+    <section class="section">
+      <div class="container container-narrow">
+        <span class="eyebrow">Test 05 — 30 sec</span>
+        <h2 style="margin-top:var(--space-4);">Vérifiez si vous avez un llms.txt.</h2>
+
+        <h3 style="margin-top:var(--space-6);">Comment faire</h3>
+        <ol class="numlist" style="margin-top:var(--space-4);">
+          <li><h4>Tapez votre URL + /llms.txt</h4><p>Exemple&nbsp;: <code>https://votresite.ca/llms.txt</code></p></li>
+          <li><h4>Si vous avez un 404, vous n&rsquo;en avez pas</h4><p>C&rsquo;est le cas pour 99&nbsp;% des sites en 2026. Pas un drame, mais une opportunité ratée.</p></li>
+          <li><h4>Si vous avez un fichier, lisez-le</h4><p>Il doit décrire votre site, vos pages clés, votre identité — en Markdown structuré.</p></li>
+        </ol>
+
+        <p style="margin-top:var(--space-6); padding:var(--space-5); background:var(--color-bg-elevated); border-radius:var(--radius-md); color:var(--color-text-secondary); font-size:var(--text-sm);">
+          📂 Exemple à examiner&nbsp;: <a href="https://nextiwebstudio.ca/llms.txt" target="_blank" rel="noopener" style="color:var(--color-primary);">nextiwebstudio.ca/llms.txt</a>. Vous pouvez vous en inspirer pour rédiger le vôtre. Coût&nbsp;: 0&nbsp;$. Temps&nbsp;: 30 minutes.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">En résumé</span>
+        <h2 style="margin-top:var(--space-4);">Si vos 5 tests échouent, vous avez identifié la cause.</h2>
+
+        <p class="lead" style="margin-top:var(--space-6);">
+          La cause de votre absence dans les réponses IA n&rsquo;est <strong>jamais un mystère</strong>. C&rsquo;est toujours une combinaison de ces 5 facteurs&nbsp;:
+        </p>
+        <ul class="manifest-points" style="margin-top:var(--space-4);">
+          <li>Pas de Schema.org</li>
+          <li>Pas de FAQPage citables</li>
+          <li>Pas de llms.txt</li>
+          <li>Robots.txt qui bloque (ou n&rsquo;autorise pas explicitement) les bots IA</li>
+          <li>Pas d&rsquo;auteur identifié avec sameAs externe</li>
+        </ul>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          La bonne nouvelle&nbsp;: ce sont tous des <strong>problèmes techniques</strong>, pas stratégiques. Donc <strong>tous solubles en 2 à 6 semaines</strong>, sans refonte de site et sans changement de positionnement.
+        </p>
+        <p style="margin-top:var(--space-4); color:var(--color-text-secondary);">
+          Et la mauvaise nouvelle&nbsp;: chaque mois qui passe, le pourcentage de recherches qui passe par ChatGPT, Perplexity et Google AI augmente. Aujourd&rsquo;hui <strong>~30&nbsp;%</strong>. Probablement 50&nbsp;% en 2027. Si vous attendez, vos concurrents qui agissent maintenant vont creuser l&rsquo;écart.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Ce que les patrons de PME nous demandent sur GEO/AEO.</h2>
+        </div>
+
+        <div class="faq-list" style="margin-top:var(--space-8);">
+          <details class="faq-item">
+            <summary>Combien de temps avant d&rsquo;être cité par ChatGPT après avoir tout mis en place&nbsp;?</summary>
+            <div class="faq-body"><p>Entre <strong>2 et 8 semaines</strong> pour les premières citations. Plus rapide que le SEO Google traditionnel&nbsp;: les modèles IA recrawlent activement les sites avec du contenu structuré tous les 7-14 jours. La pleine montée en visibilité IA arrive vers <strong>3-6 mois</strong>, en parallèle de la consolidation de votre autorité topique.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Mon site doit-il avoir un llms.txt pour être cité&nbsp;?</summary>
+            <div class="faq-body"><p>Non, ce n&rsquo;est <strong>pas obligatoire</strong> — mais c&rsquo;est un signal fort. Le fichier llms.txt (proposé par Anthropic en 2024 et adopté progressivement par les LLMs commerciaux) sert de carte du contenu citable. Sans, les IA peuvent toujours vous citer via Schema.org et le contenu HTML. Avec, vous augmentez vos chances d&rsquo;être cité correctement. Coût&nbsp;: 0&nbsp;$, gain&nbsp;: significatif.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Faut-il bloquer ou autoriser les bots IA dans le robots.txt&nbsp;?</summary>
+            <div class="faq-body"><p><strong>Autorisez-les</strong> si vous voulez être cité. Les bots à autoriser explicitement&nbsp;: <code>GPTBot</code> et <code>OAI-SearchBot</code> (OpenAI), <code>ClaudeBot</code> et <code>Claude-Web</code> (Anthropic), <code>PerplexityBot</code> (Perplexity), <code>Google-Extended</code> (Google AI), <code>Applebot-Extended</code> (Apple Intelligence). Bloquer ces bots&nbsp;= invisibilité totale dans les réponses IA. C&rsquo;est l&rsquo;erreur silencieuse la plus coûteuse de 2026.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>GEO et AEO, c&rsquo;est la même chose&nbsp;?</summary>
+            <div class="faq-body"><p>Très proche mais nuancé. <strong>GEO</strong> (Generative Engine Optimization)&nbsp;= optimiser pour les moteurs génératifs comme ChatGPT, Perplexity, Gemini. <strong>AEO</strong> (Answer Engine Optimization)&nbsp;= optimiser pour les moteurs de réponse, ce qui inclut aussi «&nbsp;People Also Ask&nbsp;» Google, les featured snippets, Alexa, Siri. En pratique, les techniques se recoupent à 80&nbsp;%&nbsp;: structure citable, FAQ, schémas, autorité humaine.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Comment savoir si ChatGPT cite déjà mon site&nbsp;?</summary>
+            <div class="faq-body"><p>Le plus simple&nbsp;: posez à ChatGPT (mode connecté à internet) la question type que vos clients posent. Exemple&nbsp;: «&nbsp;Quel dentiste à Montréal accepte les patients anxieux&nbsp;?&nbsp;» Si votre nom apparaît, vous êtes cité. Sinon, regardez les sources citées — ce sont vos concurrents en visibilité IA. Faites le même test sur <strong>Perplexity</strong> qui affiche systématiquement ses sources.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Vous avez fait les 5 tests&nbsp;?</span>
+          <h2 style="margin-top:var(--space-4);">Si plus de 2 ont échoué, votre site dort dans les réponses IA.</h2>
+          <p>L&rsquo;équipe Nextiweb audite votre site et vous renvoie un mini-rapport en 24h&nbsp;: ce qui marche, ce qui bloque, et la roadmap de corrections par priorité.</p>
+          <div class="cta-band-actions">
+            <a href="https://nextiweb.ca/contact.html?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-geo-aeo&utm_content=cta-primary" class="btn btn-primary btn-lg" rel="noopener">Demander un audit GEO/AEO gratuit</a>
+            <a href="../../methodologie.html" class="btn btn-ghost btn-lg">Voir notre méthode complète</a>
+          </div>
+          <p class="cta-band-meta">Réponse sous 24h&nbsp;·&nbsp;Sans engagement&nbsp;·&nbsp;Montréal,&nbsp;QC,&nbsp;Canada</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHOR -->
+    <section class="section" style="background:var(--color-bg-elevated);">
+      <div class="container container-narrow">
+        <span class="eyebrow">L&rsquo;autrice</span>
+        <div class="signature-block">
+          <span class="signature" aria-hidden="true">Khadija</span>
+          <p class="signature-fullname">Ait Lassri · Fondatrice Nextiweb · Montréal</p>
+        </div>
+        <p style="margin-top:var(--space-6); color:var(--color-text-secondary); text-align:center;">
+          Spécialiste GEO/AEO pour PME québécoises. A construit 6 sites de démonstration optimisés pour les IA — chaque page citable par ChatGPT, Perplexity et Google AI dès le jour 1 du déploiement.
+        </p>
+        <p style="margin-top:var(--space-4); text-align:center;">
+          <a href="https://www.linkedin.com/in/khadija-ait-lassri-327b139a/" target="_blank" rel="noopener" style="color:var(--color-primary);">LinkedIn</a>
+          &nbsp;·&nbsp;
+          <a href="../../a-propos.html" style="color:var(--color-primary);">À propos</a>
+          &nbsp;·&nbsp;
+          <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-geo-aeo&utm_content=author-bio" rel="noopener" style="color:var(--color-primary);">Agence Nextiweb</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTICLES CONNEXES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">À lire ensuite</span>
+          <h2>Articles connexes.</h2>
+        </div>
+
+        <div class="blog-grid" style="margin-top:var(--space-8);">
+          <a href="../5-erreurs-seo-cliniques-dentaires/" class="blog-card" style="text-decoration:none; color:inherit; display:block;">
+            <span class="blog-tag">Soins · Audit terrain</span>
+            <h3>5 erreurs SEO que font 90&nbsp;% des cliniques dentaires</h3>
+            <p>Audit de 27 sites dentaires québécois&nbsp;: les 5 erreurs récurrentes et comment les corriger en 2-4 semaines.</p>
+            <span class="blog-meta">📅 13 mai 2026&nbsp;·&nbsp;⏱ 8 min</span>
+          </a>
+
+          <a href="../anatomie-site-restaurant-quebec-convertit/" class="blog-card" style="text-decoration:none; color:inherit; display:block;">
+            <span class="blog-tag">Restaurant · Anatomie</span>
+            <h3>Anatomie d&rsquo;un site restaurant qui convertit</h3>
+            <p>Les 6 éléments qui transforment un visiteur en réservation. Avec Kintsugi Sushi Bar comme cas d&rsquo;école.</p>
+            <span class="blog-meta">📅 13 mai 2026&nbsp;·&nbsp;⏱ 9 min</span>
+          </a>
+
+          <article class="blog-card">
+            <span class="blog-tag">Guide technique</span>
+            <h3>Le code invisible qui dit à Google «&nbsp;c&rsquo;est un dentiste à Montréal&nbsp;»</h3>
+            <p>Guide pratique avec code prêt à copier, validation, erreurs courantes et exemples par secteur québécois.</p>
+            <span class="blog-meta">À publier · ~2500 mots</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="/" class="logo">
+            <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async">
+            <span class="logo-text"><span>Nextiweb Studio</span><small>Studio créatif</small></span>
+          </a>
+          <p>Le laboratoire créatif de <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-geo-aeo&utm_content=footer-about" rel="noopener" style="color:var(--color-primary);">Nextiweb</a>, agence web à Montréal.</p>
+        </div>
+        <div>
+          <h4>Le labo</h4>
+          <div class="footer-links">
+            <a href="/">Accueil</a>
+            <a href="../../labo/">Tous les crénos</a>
+            <a href="../../le-laboratoire.html">Manifeste</a>
+            <a href="../../methodologie.html">Méthode</a>
+            <a href="../../a-propos.html">À propos</a>
+            <a href="../">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h4>Crénos</h4>
+          <div class="footer-links">
+            <a href="../../labo/dentaire-et-soins/">Soins et services</a>
+            <a href="../../labo/restaurant-et-cafe/">Restaurant et café</a>
+            <a href="../../labo/piscine-et-renovation/">Construction et rénovation</a>
+            <a href="../../labo/chocolat-et-artisan/">Art et artisanat</a>
+            <a href="../../labo/e-commerce-et-marque-locale/">E-commerce et marque locale</a>
+            <a href="../../labo/services-a-domicile/">Services à domicile</a>
+          </div>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <div class="footer-links">
+            <a href="/politique-confidentialite.html">Politique de confidentialité</a>
+            <a href="/politique-cookies.html">Politique de cookies</a>
+            <a href="/mentions-legales.html">Mentions légales</a>
+            <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-geo-aeo&utm_content=footer" rel="noopener">Agence Nextiweb.ca</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> Nextiweb Studio · NEQ&nbsp;2272348204 · <a href="/mentions-legales.html" style="color:inherit; text-decoration:underline;">Mentions légales</a></span>
+        <span class="footer-meta">Consultez notre <a href="/politique-confidentialite.html" style="color:var(--color-primary);">politique de confidentialité</a>, notre <a href="/politique-cookies.html" style="color:var(--color-primary);">politique de cookies</a> et nos <a href="/mentions-legales.html" style="color:var(--color-primary);">mentions légales</a>. <button type="button" id="manage-cookies-btn" style="background:transparent; border:0; color:var(--color-primary); cursor:pointer; font:inherit; text-decoration:underline; padding:0;">Gérer mes cookies</button></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bandeau consentement cookies — Loi 25 Québec -->
+  <div id="cookie-banner" class="cookie-banner" data-open="false" role="dialog" aria-labelledby="cookie-banner-title" aria-modal="true">
+    <div class="cookie-banner-card">
+      <h2 class="cookie-banner-title" id="cookie-banner-title">Gestion des cookies</h2>
+      <p class="cookie-banner-text">
+        Nous utilisons des cookies essentiels pour le fonctionnement du site.
+        Les cookies de mesure et de marketing ne sont activés qu&rsquo;avec votre
+        consentement, conformément à la <strong>Loi 25</strong>.
+      </p>
+      <p class="cookie-banner-links">
+        <a href="/politique-confidentialite.html">Politique de confidentialité</a>
+        <span aria-hidden="true">·</span>
+        <a href="/politique-cookies.html">Politique de cookies</a>
+      </p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" data-consent="accept-all">Accepter tout</button>
+        <button type="button" class="btn btn-ghost btn-sm" data-consent="refuse">Refuser</button>
+        <button type="button" class="btn btn-ghost btn-sm" data-consent="customize">Personnaliser</button>
+      </div>
+      <div class="cookie-banner-custom">
+        <label class="cookie-option">
+          <input type="checkbox" checked disabled data-cookie="essential">
+          <span>Cookies essentiels <small>(obligatoires)</small></span>
+        </label>
+        <label class="cookie-option">
+          <input type="checkbox" data-cookie="analytics">
+          <span>Cookies de mesure d&rsquo;audience</span>
+        </label>
+        <label class="cookie-option">
+          <input type="checkbox" data-cookie="marketing">
+          <span>Cookies marketing</span>
+        </label>
+        <button type="button" class="btn btn-primary btn-sm" data-consent="save">Enregistrer mes choix</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
