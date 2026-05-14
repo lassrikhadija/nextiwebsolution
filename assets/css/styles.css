@@ -599,6 +599,16 @@ img.logo-mark {
   gap: var(--space-6);
 }
 
+/* Grille 2x2 stricte — pour les sections de 4 cartes (pas de wrap 3+1) */
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+@media (max-width: 720px) {
+  .grid-2x2 { grid-template-columns: 1fr; }
+}
+
 .card {
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border-light);
