@@ -85,9 +85,10 @@
   # Permissions Policy minimale
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
-  # Content-Security-Policy — score Mozilla Observatory A+
-  # Autorise Google Fonts (CSS + woff2) + self pour le reste
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://*.nextiwebstudio.ca; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+  # Content-Security-Policy — autorise Google Tag Manager, GA4, Google Fonts
+  # 'unsafe-inline' nécessaire pour les scripts GTM injectés dynamiquement
+  # (Google recommande cette config quand on utilise GTM)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: https://*.google-analytics.com https://*.googletagmanager.com; frame-src https://*.nextiwebstudio.ca https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://*.analytics.google.com https://stats.g.doubleclick.net; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
 
   # Cross-Origin policies (sécurité moderne — Lighthouse Best Practices)
   Header always set Cross-Origin-Opener-Policy "same-origin"
