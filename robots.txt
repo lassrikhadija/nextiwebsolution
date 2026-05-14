@@ -5,6 +5,8 @@
 User-agent: *
 Allow: /
 Disallow: /assets/images/og-*.jpg
+Disallow: /assets/images/og-template.html
+Disallow: /blog/articles/
 
 # Bots IA — explicitement autorisés (stratégie GEO/AEO)
 User-agent: GPTBot
