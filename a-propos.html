@@ -12,6 +12,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="geo.region" content="CA-QC">
   <meta name="geo.placename" content="Montréal">
+  <meta name="author" content="Khadija Ait Lassri — Nextiweb Studio">
 
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="fr_CA">
@@ -32,6 +33,17 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nextiwebstudio.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://nextiwebstudio.ca/a-propos.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "À propos — Nextiweb Studio",
     "url": "https://nextiwebstudio.ca/a-propos.html",
@@ -40,8 +52,9 @@
       "@type": "Organization",
       "name": "Nextiweb Studio",
       "url": "https://nextiwebstudio.ca/",
-      "parentOrganization": { "@type": "Organization", "name": "Nextiweb", "url": "https://nextiweb.ca/" },
-      "founder": { "@type": "Person", "name": "Khadija Ait Lassri", "jobTitle": "Fondatrice", "worksFor": { "@type": "Organization", "name": "Nextiweb" } }
+      "sameAs": ["https://www.linkedin.com/company/25819184/"],
+      "parentOrganization": { "@type": "Organization", "name": "Nextiweb", "url": "https://nextiweb.ca/", "sameAs": ["https://www.linkedin.com/company/25819184/"] },
+      "founder": { "@type": "Person", "@id": "https://nextiwebstudio.ca/#khadija", "name": "Khadija Ait Lassri", "jobTitle": "Fondatrice", "worksFor": { "@type": "Organization", "name": "Nextiweb" }, "sameAs": ["https://www.linkedin.com/in/khadija-ait-lassri-327b139a/"] }
     }
   }
   </script>
