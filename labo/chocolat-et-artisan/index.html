@@ -408,17 +408,38 @@
   </footer>
 
   <!-- Bandeau consentement cookies — Loi 25 Québec -->
-  <div id="cookie-banner" class="cookie-banner" data-open="false" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
-    <div class="cookie-banner-inner">
-      <div class="cookie-banner-text">
-        <strong id="cookie-banner-title">🍪 On respecte votre vie privée.</strong>
-        Ce site utilise <strong>un seul cookie technique</strong> pour mémoriser ce choix.
-        Pas d&rsquo;analytics, pas de pub, pas de tracking tiers.
-        <a href="/politique-confidentialite.html">Voir la politique</a>.
-      </div>
+  <div id="cookie-banner" class="cookie-banner" data-open="false" role="dialog" aria-labelledby="cookie-banner-title" aria-modal="true">
+    <div class="cookie-banner-card">
+      <h2 class="cookie-banner-title" id="cookie-banner-title">Gestion des cookies</h2>
+      <p class="cookie-banner-text">
+        Nous utilisons des cookies essentiels pour le fonctionnement du site.
+        Les cookies de mesure et de marketing ne sont activés qu&rsquo;avec votre
+        consentement, conformément à la <strong>Loi 25</strong>.
+      </p>
+      <p class="cookie-banner-links">
+        <a href="/politique-confidentialite.html">Politique de confidentialité</a>
+        <span aria-hidden="true">·</span>
+        <a href="/politique-cookies.html">Politique de cookies</a>
+      </p>
       <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" data-consent="accept-all">Accepter tout</button>
         <button type="button" class="btn btn-ghost btn-sm" data-consent="refuse">Refuser</button>
-        <button type="button" class="btn btn-primary btn-sm" data-consent="accept">Accepter</button>
+        <button type="button" class="btn btn-ghost btn-sm" data-consent="customize">Personnaliser</button>
+      </div>
+      <div class="cookie-banner-custom">
+        <label class="cookie-option">
+          <input type="checkbox" checked disabled data-cookie="essential">
+          <span>Cookies essentiels <small>(obligatoires)</small></span>
+        </label>
+        <label class="cookie-option">
+          <input type="checkbox" data-cookie="analytics">
+          <span>Cookies de mesure d&rsquo;audience</span>
+        </label>
+        <label class="cookie-option">
+          <input type="checkbox" data-cookie="marketing">
+          <span>Cookies marketing</span>
+        </label>
+        <button type="button" class="btn btn-primary btn-sm" data-consent="save">Enregistrer mes choix</button>
       </div>
     </div>
   </div>

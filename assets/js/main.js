@@ -96,9 +96,10 @@
     el.textContent = new Date().getFullYear();
   });
 
-  // ---------- 7. BANDEAU CONSENTEMENT COOKIE (Loi 25) ----------
+  // ---------- 7. GESTIONNAIRE COOKIES (Loi 25) ----------
+  // 3 niveaux : Accepter tout / Refuser / Personnaliser (granular)
   const CONSENT_KEY = 'nws-consent';
-  const CONSENT_VERSION = '1'; // bump si la politique change
+  const CONSENT_VERSION = '2'; // bump car format granulaire
   const banner = document.getElementById('cookie-banner');
 
   if (banner) {
@@ -106,22 +107,57 @@
     const isValid = stored && stored.startsWith(CONSENT_VERSION + ':');
 
     if (!isValid) {
-      // pas de choix enregistré → afficher le bandeau
       requestAnimationFrame(() => banner.setAttribute('data-open', 'true'));
+    } else {
+      // Restaure l'état des checkboxes depuis le choix précédent
+      try {
+        const payload = stored.split(':').slice(1, -1).join(':'); // au cas où JSON contient ':'
+        const choice = JSON.parse(payload);
+        const analyticsBox = banner.querySelector('[data-cookie="analytics"]');
+        const marketingBox = banner.querySelector('[data-cookie="marketing"]');
+        if (analyticsBox) analyticsBox.checked = !!choice.analytics;
+        if (marketingBox) marketingBox.checked = !!choice.marketing;
+      } catch (e) { /* ignore */ }
     }
 
-    const recordChoice = (choice) => {
-      const value = CONSENT_VERSION + ':' + choice + ':' + Date.now();
+    const analyticsBox = banner.querySelector('[data-cookie="analytics"]');
+    const marketingBox = banner.querySelector('[data-cookie="marketing"]');
+
+    const recordChoice = (level) => {
+      let analytics = false;
+      let marketing = false;
+      if (level === 'accept-all') {
+        analytics = true;
+        marketing = true;
+        if (analyticsBox) analyticsBox.checked = true;
+        if (marketingBox) marketingBox.checked = true;
+      } else if (level === 'save') {
+        analytics = !!(analyticsBox && analyticsBox.checked);
+        marketing = !!(marketingBox && marketingBox.checked);
+      } // 'refuse' garde tout à false
+
+      const choice = { essential: true, analytics, marketing };
+      const value = CONSENT_VERSION + ':' + JSON.stringify(choice) + ':' + Date.now();
       localStorage.setItem(CONSENT_KEY, value);
       banner.setAttribute('data-open', 'false');
-      // dispatch event au cas où d'autres scripts veulent réagir
-      document.dispatchEvent(new CustomEvent('nws:consent', { detail: { choice } }));
+      document.dispatchEvent(new CustomEvent('nws:consent', { detail: choice }));
     };
 
-    const acceptBtn = banner.querySelector('[data-consent="accept"]');
+    const acceptAllBtn = banner.querySelector('[data-consent="accept-all"]');
     const refuseBtn = banner.querySelector('[data-consent="refuse"]');
-    if (acceptBtn) acceptBtn.addEventListener('click', () => recordChoice('accept'));
+    const customizeBtn = banner.querySelector('[data-consent="customize"]');
+    const saveBtn = banner.querySelector('[data-consent="save"]');
+
+    if (acceptAllBtn) acceptAllBtn.addEventListener('click', () => recordChoice('accept-all'));
     if (refuseBtn) refuseBtn.addEventListener('click', () => recordChoice('refuse'));
+    if (saveBtn) saveBtn.addEventListener('click', () => recordChoice('save'));
+
+    // "Personnaliser" — met le focus sur la première checkbox active (signal visuel)
+    if (customizeBtn && analyticsBox) {
+      customizeBtn.addEventListener('click', () => {
+        analyticsBox.focus();
+      });
+    }
 
     // "Gérer mes cookies" — boutons dans le footer ou la politique de cookies
     const manageBtns = document.querySelectorAll('#manage-cookies-btn, #manage-cookies-cta, [data-consent="manage"]');
@@ -129,8 +165,6 @@
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         banner.setAttribute('data-open', 'true');
-        // optionnel : faire scroller vers le bas pour que le bandeau soit visible
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
       });
     });
   }
