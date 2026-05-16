@@ -20,12 +20,30 @@
       'wait_for_update': 500
     });
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TFK5VQB5');</script>
+  <!-- Google Tag Manager (différé pour performance Web Vitals) -->
+  <script>
+    (function() {
+      var gtmLoaded = false;
+      function loadGTM() {
+        if (gtmLoaded) return;
+        gtmLoaded = true;
+        var w = window, d = document;
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName('script')[0];
+        var j = d.createElement('script');
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TFK5VQB5';
+        f.parentNode.insertBefore(j, f);
+      }
+      // Charger au 1er evenement utilisateur (scroll/clic/touche/clavier)
+      ['scroll', 'mousedown', 'touchstart', 'keydown'].forEach(function(ev) {
+        window.addEventListener(ev, loadGTM, { once: true, passive: true });
+      });
+      // Fallback: charger apres 5s sans interaction (bots, crawls, etc.)
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
   <!-- End Google Tag Manager -->
 
   <title>Comment être cité par ChatGPT et Perplexity en 2026 (showcase + tests) | Nextiweb Studio</title>
@@ -55,7 +73,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sacramento&display=swap"></noscript>
   <link rel="stylesheet" href="../../assets/css/styles.css">
   <link rel="icon" type="image/png" href="../../assets/images/favicon-nextiweb-infini.png">
   <link rel="apple-touch-icon" href="../../assets/images/favicon-nextiweb-infini.png">
@@ -131,7 +151,7 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Nextiweb Studio, accueil">
-        <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async">
+        <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async" fetchpriority="high">
         <span class="logo-text"><span>Nextiweb Studio</span><small>Studio créatif</small></span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span></button>
@@ -674,7 +694,7 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a href="/" class="logo">
-            <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async">
+            <img class="logo-mark" src="../../assets/images/logo-nextiweb-light.png" alt="" width="36" height="36" loading="eager" decoding="async" fetchpriority="high">
             <span class="logo-text"><span>Nextiweb Studio</span><small>Studio créatif</small></span>
           </a>
           <p>Le laboratoire créatif de <a href="https://nextiweb.ca?utm_source=nextiwebstudio.ca&utm_medium=labo&utm_campaign=blog-geo-aeo&utm_content=footer-about" rel="noopener" style="color:var(--color-primary);">Nextiweb</a>, agence web à Montréal.</p>
