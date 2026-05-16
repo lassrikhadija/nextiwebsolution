@@ -139,6 +139,11 @@ ol {
 }
 
 /* -------- 3. TYPOGRAPHIE BASE -------- */
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -151,8 +156,59 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------- 3.b ANTI-OVERFLOW MOBILE -------- */
+/* Empêche tout élément de casser la largeur du viewport mobile.
+   Cible: code/pre longs, iframes, images, tableaux, longues URLs. */
+img,
+iframe,
+video,
+canvas,
+svg:not(.ico) {
+  max-width: 100%;
+  height: auto;
+}
+
+code,
+pre {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/* Casse les longues URLs/mots dans le corps de texte */
+p, li, dd, .lead, .faq-body, .blog-card p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Tables responsive (au cas où) */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Le container ne dépasse jamais la fenêtre */
+.container,
+.container-narrow {
+  max-width: min(var(--container-max), 100vw);
+}
+
+/* Iframes de démo : clipping garanti */
+.device-screen,
+.device-phone-screen {
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
