@@ -2026,6 +2026,51 @@ h3 > .ico:first-child {
   width: 100%;
 }
 
+/* MOBILE — cookie banner compact (≤ 600px) */
+@media (max-width: 600px) {
+  .cookie-banner {
+    padding: var(--space-3);
+    align-items: flex-end;       /* colle vers le bas pour le pouce */
+  }
+  .cookie-banner-card {
+    max-height: calc(100vh - var(--space-6));
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-md);
+  }
+  .cookie-banner-title {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-2);
+  }
+  .cookie-banner-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: var(--space-2);
+  }
+  .cookie-banner-links {
+    font-size: 0.8rem;
+    margin-bottom: var(--space-3);
+  }
+  .cookie-banner-actions {
+    gap: var(--space-2);
+  }
+  .cookie-banner-actions .btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.85rem;
+  }
+  .cookie-banner-custom {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+  }
+  .cookie-option {
+    padding: var(--space-1) 0;
+    font-size: 0.85rem;
+  }
+  .cookie-option input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 /* -------- 33. SIGNATURE MANUSCRITE (page À propos) -------- */
 .signature-block {
   display: flex;
