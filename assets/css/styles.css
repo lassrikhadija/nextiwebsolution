@@ -184,6 +184,15 @@ svg:not(.ico) {
   height: auto;
 }
 
+/* EXCEPTION — les iframes de démo gardent leur largeur native (390px / 1280px)
+   nécessaire pour le transform: scale() qui simule le rendu mobile/desktop natif.
+   Sans cette exception, max-width:100% ci-dessus écrase leur taille et casse le rendu. */
+.demo-iframe-mobile,
+.demo-iframe-desktop {
+  max-width: none;
+  height: auto;
+}
+
 code,
 pre {
   word-break: break-word;
