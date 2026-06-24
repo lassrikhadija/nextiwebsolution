@@ -1,6 +1,6 @@
 # Nextiweb Studio
 
-> Laboratoire créatif de l'agence Nextiweb, basé à Montréal (Québec, Canada). Nextiweb Studio construit 6 sites de démonstration sectoriels complets et cliquables avant qu'aucun client ne les commande, pour que les PME québécoises voient à quoi ressemble vraiment un site moderne avant d'en commander un.
+> Laboratoire créatif de l'agence Nextiweb, basé à Montréal (Québec, Canada). Nextiweb Studio construit 11 sites de démonstration sectoriels complets et cliquables avant qu'aucun client ne les commande, pour que les PME québécoises voient à quoi ressemble vraiment un site moderne avant d'en commander un.
 
 ## À propos
 
@@ -9,19 +9,24 @@ Nextiweb Studio est un site informationnel (showroom/labo). L'agence opérationn
 Fondatrice : Khadija Ait Lassri (Montréal, Québec)
 LinkedIn : https://www.linkedin.com/in/khadija-ait-lassri/
 
-## Les 6 crénos (familles de métiers couvertes)
+## Les 11 crénos (familles de métiers couvertes)
 
-- [Soins et services](https://nextiwebstudio.ca/labo/dentaire-et-soins/) — dentiste, ostéo, kiné, naturopathe, podologue, sage-femme, psychologue, massothérapeute, acupuncteur, nutritionniste
+- [Dentaire et soins](https://nextiwebstudio.ca/labo/dentaire-et-soins/) — dentiste, ostéo, kiné, naturopathe, podologue, sage-femme, psychologue, massothérapeute, acupuncteur, nutritionniste
 - [Restaurant et café](https://nextiwebstudio.ca/labo/restaurant-et-cafe/) — resto, bistro, café, salon de thé, boulangerie-pâtisserie, traiteur, cuisine de quartier
-- [Construction et rénovation](https://nextiwebstudio.ca/labo/piscine-et-renovation/) — piscinier, paysagiste, entrepreneur général, rénovateur, designer d'intérieur, ébéniste, charpentier
-- [Art et artisanat](https://nextiwebstudio.ca/labo/chocolat-et-artisan/) — chocolatier, fromager, épicerie fine, savonnier, bijoutier artisan, torréfacteur
+- [Piscine et rénovation](https://nextiwebstudio.ca/labo/piscine-et-renovation/) — piscinier, paysagiste, entrepreneur général, rénovateur, designer d'intérieur, ébéniste, charpentier
+- [Chocolat et artisan](https://nextiwebstudio.ca/labo/chocolat-et-artisan/) — chocolatier, fromager, épicerie fine, savonnier, bijoutier artisan, torréfacteur
 - [E-commerce et marque locale](https://nextiwebstudio.ca/labo/e-commerce-et-marque-locale/) — pure-player, marque DTC, créateur indépendant, mode locale, cosmétique artisanale, subscription commerce
 - [Services à domicile](https://nextiwebstudio.ca/labo/services-a-domicile/) — entretien ménager, aide aux aînés, plombier, électricien, déménagement, paysagiste d'entretien, lavage de tapis, nettoyage commercial
+- [Avocat et juridique](https://nextiwebstudio.ca/labo/avocat-et-juridique/) — avocat, cabinet juridique, notaire, médiateur, conseiller juridique
+- [Courtier immobilier](https://nextiwebstudio.ca/labo/courtier-immobilier/) — courtier immobilier, agence immobilière, évaluation, vente résidentielle et commerciale
+- [Fleuriste et floral](https://nextiwebstudio.ca/labo/fleuriste-et-floral/) — fleuriste, art floral, bouquets événementiels, mariage, deuil, abonnement
+- [Ostéopathie et thérapies](https://nextiwebstudio.ca/labo/osteopathie-et-therapies/) — ostéopathe, physiothérapeute, acupuncteur, kinésiologue, thérapeute holistique
+- [Traiteur et événementiel](https://nextiwebstudio.ca/labo/traiteur-et-evenementiel/) — traiteur, chef privé, cuisine événementielle, cocktails dînatoires, mariages et galas
 
 ## Pages clés
 
-- [Accueil](https://nextiwebstudio.ca/) — Vue d'ensemble du studio et des 6 crénos
-- [Le labo](https://nextiwebstudio.ca/labo/) — Index des 6 crénos avec démos cliquables
+- [Accueil](https://nextiwebstudio.ca/) — Vue d'ensemble du studio et des 11 crénos
+- [Le labo](https://nextiwebstudio.ca/labo/) — Index des 11 crénos avec démos cliquables
 - [Manifeste](https://nextiwebstudio.ca/le-laboratoire.html) — Les 6 règles que le studio s'impose (démos transparentes, zéro faux témoignage, méthode visible, chiffres honnêtes, pertinence locale Québec, l'agence est sur nextiweb.ca)
 - [Méthode](https://nextiwebstudio.ca/methodologie.html) — La méthode en 3 piliers : SEO sérieux et durable, visibilité IA (GEO/AEO), marketing intégré
 - [À propos](https://nextiwebstudio.ca/a-propos.html) — Le studio, sa fondatrice Khadija, et le lien avec l'agence Nextiweb
@@ -29,12 +34,17 @@ LinkedIn : https://www.linkedin.com/in/khadija-ait-lassri/
 
 ## Démos cliquables (sous-domaines)
 
-- https://soins-services.nextiwebstudio.ca/ — Studio Dentaire Belmont
-- https://restaurant-cafe.nextiwebstudio.ca/ — Kintsugi Sushi Bar
-- https://construction-renovation.nextiwebstudio.ca/ — Aqua Élite (piscinier)
-- https://art-artisanat.nextiwebstudio.ca/ — Maison Cacao (chocolatier bean-to-bar)
-- https://e-commerce.nextiwebstudio.ca/ — Marque DTC québécoise
-- https://service-domicile.nextiwebstudio.ca/ — Service d'entretien ménager
+- https://soins-services.nextiwebstudio.ca/ — Studio Dentaire Belmont (dentiste, hygiène, esthétique dentaire)
+- https://restaurant-cafe.nextiwebstudio.ca/ — Kintsugi Sushi Bar (restaurant japonais fusion, Montréal)
+- https://construction-renovation.nextiwebstudio.ca/ — Aqua Élite (piscinier et aménagement extérieur)
+- https://art-artisanat.nextiwebstudio.ca/ — Maison Cacao (chocolatier bean-to-bar artisanal)
+- https://e-commerce.nextiwebstudio.ca/ — Maison Aurélia (joaillerie d'auteur, marque DTC)
+- https://service-domicile.nextiwebstudio.ca/ — Phénix (services de restauration après sinistre)
+- https://avocat.nextiwebstudio.ca/ — Beaumont Avocats (cabinet juridique, Montréal)
+- https://courtier.nextiwebstudio.ca/ — Arpent — Camille Daoust (courtière immobilière, Montréal et Rive-Sud)
+- https://fleuriste.nextiwebstudio.ca/ — Éclosion (fleuriste, bouquets sur mesure, art floral)
+- https://ostheopathe.nextiwebstudio.ca/ — Lumen Ostéopathie (ostéopathie et thérapies, Montréal)
+- https://traiteur.nextiwebstudio.ca/ — Maison Safran (traiteur événementiel, Montréal)
 
 ## Légal et conformité
 
